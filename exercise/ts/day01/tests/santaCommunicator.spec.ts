@@ -21,11 +21,10 @@ const TOO_LATE_FOR_CHRISTMAS = 5;
 
 describe("SantaCommunicator", () => {
   let communicator: SantaCommunicator;
-  let logger: TestLogger;
+  let logger = new TestLogger();
 
   beforeEach(() => {
-    communicator = new SantaCommunicator(numberOfDaysToRest);
-    logger = new TestLogger();
+    communicator = new SantaCommunicator(numberOfDaysToRest, logger);
   });
 
   test("composeMessage", () => {
@@ -38,8 +37,7 @@ describe("SantaCommunicator", () => {
   test("shouldDetectOverdueReindeer", () => {
     const overdue = communicator.isReindeerOverdue(
       redeer,
-      TOO_LATE_FOR_CHRISTMAS,
-      logger
+      TOO_LATE_FOR_CHRISTMAS
     );
 
     expect(overdue).toBeTruthy();
@@ -53,8 +51,7 @@ describe("SantaCommunicator", () => {
     );
     const overdue = communicator.isReindeerOverdue(
       redeer,
-      numberOfDaysBeforeChristmas,
-      logger
+      numberOfDaysBeforeChristmas
     );
     expect(overdue).toBeFalsy();
   });

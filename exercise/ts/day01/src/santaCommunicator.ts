@@ -49,9 +49,11 @@ export class Reindeer {
 
 export class SantaCommunicator {
   private readonly numberOfDaysToRest: number;
+  private readonly logger: Logger;
 
-  constructor(numberOfDaysToRest: number) {
+  constructor(numberOfDaysToRest: number, logger: Logger) {
     this.numberOfDaysToRest = numberOfDaysToRest;
+    this.logger = logger;
   }
 
   public composeMessage({
@@ -67,8 +69,7 @@ export class SantaCommunicator {
 
   public isReindeerOverdue(
     reindeer: Reindeer,
-    numberOfDaysBeforeChristmas: number,
-    logger: Logger
+    numberOfDaysBeforeChristmas: number
   ): boolean {
     if (
       this.daysBeforeReturn(
@@ -76,7 +77,7 @@ export class SantaCommunicator {
         numberOfDaysBeforeChristmas
       ) <= 0
     ) {
-      logger.log(
+      this.logger.log(
         `Overdue for ${reindeer.reindeerName} located ${reindeer.currentLocation}.`
       );
       return true;
