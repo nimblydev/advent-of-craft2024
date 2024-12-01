@@ -24,7 +24,7 @@ export class ReindeerLocation {
 
 export class Reindeer {
   private readonly name: string;
-  private location: ReindeerLocation;
+  private readonly location: ReindeerLocation;
 
   constructor(name: string, currentLocation: ReindeerLocation) {
     this.name = name;
@@ -36,10 +36,6 @@ export class Reindeer {
 
   public get currentLocation(): string {
     return this.location.getLocation;
-  }
-
-  public set newLocation(location: ReindeerLocation) {
-    this.location = location;
   }
 
   public getNumberOfDaysForComingBack(): number {

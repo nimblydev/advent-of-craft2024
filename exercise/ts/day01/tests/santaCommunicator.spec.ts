@@ -7,14 +7,14 @@ import { TestLogger } from "./doubles/testLogger";
 
 const REINDEER_NAME_DASHER = "Dasher";
 const NORTH_POLE = "North Pole";
-const redeer = new Reindeer(
+const reindeer = new Reindeer(
   REINDEER_NAME_DASHER,
   new ReindeerLocation(NORTH_POLE, 5)
 );
 const numberOfDaysToRest = 2;
 const numberOfDaysBeforeChristmas = 24;
 const santaCommunicationDetails = {
-  reindeer: redeer,
+  reindeer: reindeer,
   numberOfDaysBeforeChristmas,
 };
 const TOO_LATE_FOR_CHRISTMAS = 5;
@@ -36,7 +36,7 @@ describe("SantaCommunicator", () => {
 
   test("shouldDetectOverdueReindeer", () => {
     const overdue = communicator.isReindeerOverdue(
-      redeer,
+      reindeer,
       TOO_LATE_FOR_CHRISTMAS
     );
 
@@ -45,12 +45,13 @@ describe("SantaCommunicator", () => {
   });
 
   test("shouldReturnFalseWhenNoOverdue", () => {
-    redeer.newLocation = new ReindeerLocation(
-      NORTH_POLE,
-      numberOfDaysBeforeChristmas - numberOfDaysToRest - 1
+    const nearbyReindeer = new Reindeer(
+      "Dancer",
+      new ReindeerLocation(NORTH_POLE, 10)
     );
+
     const overdue = communicator.isReindeerOverdue(
-      redeer,
+      nearbyReindeer,
       numberOfDaysBeforeChristmas
     );
     expect(overdue).toBeFalsy();
