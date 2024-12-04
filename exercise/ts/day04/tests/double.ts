@@ -5,7 +5,7 @@ export class EmailServiceDouble {
   readNewEmails(): void {
     this._readNewEmailsWasCalled = true;
   }
-  isNewMailRead(): boolean {
+  newEmailHaveBeenRead(): boolean {
     return this._readNewEmailsWasCalled;
   }
 }
@@ -15,7 +15,7 @@ export class ReindeerFeederDouble {
   feedReindeers(): void {
     this._feedReindeersWasCalled = true;
   }
-  isFeedingDone(): boolean {
+  reindeersHaveBeenFed(): boolean {
     return this._feedReindeersWasCalled;
   }
 }
@@ -28,13 +28,13 @@ export class ScheduleServiceDouble {
   organizeMyDay(schedule: Schedule): void {
     this._organizeMyDayWasCalledWithSchedule = true;
   }
-  myDayIsOrganized(): boolean {
+  dayHasBeenOrganized(): boolean {
     return this._organizeMyDayWasCalledWithSchedule;
   }
   continueDay(): void {
     this._continueDayWasCalled = true;
   }
-  continueDayWasCalled(): boolean {
+  scheduleHaveBeenContinued(): boolean {
     return this._continueDayWasCalled;
   }
   todaySchedule(): Schedule {
