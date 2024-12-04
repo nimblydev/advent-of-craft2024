@@ -40,9 +40,9 @@ describe("Routine", () => {
     const reindeerFeeder = new ReindeerFeederDouble();
     const routine = new Routine(emailService, scheduleService, reindeerFeeder);
     routine.start();
-    expect(reindeerFeeder.isFeedingDone()).toBeTruthy();
-    expect(emailService.isNewMailRead()).toBeTruthy();
-    expect(scheduleService.myDayIsOrganized()).toBeTruthy();
-    expect(scheduleService.continueDayWasCalled()).toBeTruthy();
+    expect(reindeerFeeder.reindeersHaveBeenFed()).toBeTruthy();
+    expect(emailService.newEmailHaveBeenRead()).toBeTruthy();
+    expect(scheduleService.dayHasBeenOrganized()).toBeTruthy();
+    expect(scheduleService.scheduleHaveBeenContinued()).toBeTruthy();
   });
 });
