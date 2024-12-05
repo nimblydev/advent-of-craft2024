@@ -1,4 +1,4 @@
 export const validateEID = (eid: string) => {
-  if (eid === null) return false;
+  if (eid === null || eid === "") return false;
   return true;
 };
