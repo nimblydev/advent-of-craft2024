@@ -2,14 +2,10 @@ const EID_LENGTH = 8;
 const SEX_DIGIT_INDEX = 0;
 const ELVEN_SEX = ["1", "2", "3"];
 
-export const validateEID = (eid: string) => {
-  if (isEmpty(eid)) return false;
-  if (lengthIsInvalid(eid)) return false;
-  const sexDigit = eid.at(SEX_DIGIT_INDEX);
-  if (!sexDigitValidation(sexDigit)) return false;
-
-  return true;
-};
+export const validateEID = (eid: string) =>
+  !isEmpty(eid) &&
+  !lengthIsInvalid(eid) &&
+  sexDigitValidation(eid.at(SEX_DIGIT_INDEX));
 
 const sexDigitValidation = (sexDigit: string) => {
   return ELVEN_SEX.includes(sexDigit);
