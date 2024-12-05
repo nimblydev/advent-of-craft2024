@@ -1,5 +1,7 @@
-describe('EID', () => {
-    test('implement your tests here', () => {
-        expect(43).toBe(42);
-    });
+import { validateEID } from "./validateEID";
+
+describe("EID validation", () => {
+  it("should return false for null EID", () => {
+    expect(validateEID(null)).toBe(false);
+  });
 });
