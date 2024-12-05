@@ -13,6 +13,10 @@ describe("EID validation", () => {
     expect(validateEID("19845606")).toBe(true);
   });
 
+  it("should return false for 198456066 a too long EID)", () => {
+    expect(validateEID("198456066")).toBe(false);
+  });
+
   it("should return false for 2230 a too short EID)", () => {
     expect(validateEID("2230")).toBe(false);
   });
