@@ -20,4 +20,8 @@ describe("EID validation", () => {
   it("should return false for 40000325 (invalid sex digit)", () => {
     expect(validateEID("40000325")).toBe(false);
   });
+
+  it("should return false for 00000394 (invalid sex digit)", () => {
+    expect(validateEID("00000394")).toBe(false);
+  });
 });
