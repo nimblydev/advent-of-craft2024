@@ -1,1 +1,4 @@
-export const validateEID = (eid: string) => false;
+export const validateEID = (eid: string) => {
+  if (eid === null) return false;
+  return true;
+};
