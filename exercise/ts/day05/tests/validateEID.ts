@@ -1,7 +1,6 @@
 export const validateEID = (eid: string) => {
-  if (!eid) return false;
-  if (eid.length !== 8) return false;
-
+  if (isEmpty(eid)) return false;
+  if (lengthIsInvalid(eid)) return false;
   const sexDigit = eid.at(0);
   if (!sexDigitValidation(sexDigit)) return false;
 
@@ -11,3 +10,7 @@ export const validateEID = (eid: string) => {
 const sexDigitValidation = (sexDigit: string) => {
   return ["1", "2", "3"].includes(sexDigit);
 };
+
+const isEmpty = (eid: string) => eid === null || eid === "";
+
+const lengthIsInvalid = (eid: string) => eid.length !== 8;
