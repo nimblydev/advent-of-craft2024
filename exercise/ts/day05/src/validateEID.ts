@@ -1,7 +1,7 @@
 const EID_LENGTH = 8;
 const ELVEN_SEX = ["1", "2", "3"];
 const numericStringPattern = /^\d+$/;
-const eidModulus = 97;
+const MODULUS = 97;
 const CONTROL_KEY_LENGTH = 2;
 const ZERO_PADDING_CHAR = "0";
 
@@ -33,8 +33,8 @@ const isValidEIDYear = (year: string) =>
   isOnlyDigits(year) && year.length === 2;
 
 const isControlKeyValid = (eidPrefix: string, controlKey: string) => {
-  const modulo = parseInt(eidPrefix, 10) % eidModulus;
-  const complementedValue = (eidModulus - modulo)
+  const modulo = parseInt(eidPrefix, 10) % MODULUS;
+  const complementedValue = (MODULUS - modulo)
     .toString()
     .padStart(CONTROL_KEY_LENGTH, ZERO_PADDING_CHAR);
 
