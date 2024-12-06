@@ -1,14 +1,19 @@
 const EID_LENGTH = 8;
-const SEX_DIGIT_INDEX = 0;
 const ELVEN_SEX = ["1", "2", "3"];
 const numericStringPattern = /^\d+$/;
 
-export const validateEID = (eid: string) =>
-  !isEmpty(eid) &&
-  !lengthIsInvalid(eid) &&
-  isOnlyDigits(eid) &&
-  sexDigitValidation(eid.at(SEX_DIGIT_INDEX)) &&
-  yearValdidation(eid.substring(1, 3));
+export const validateEID = (eid: string) => {
+  const EidYearValue = eid?.substring(1, 3);
+  const EidSexValue = eid?.substring(0, 1);
+
+  return (
+    !isEmpty(eid) &&
+    !lengthIsInvalid(eid) &&
+    isOnlyDigits(eid) &&
+    sexDigitValidation(EidSexValue) &&
+    yearValdidation(EidYearValue)
+  );
+};
 
 const sexDigitValidation = (sexDigit: string) => {
   return ELVEN_SEX.includes(sexDigit);
