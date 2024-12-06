@@ -6,19 +6,18 @@ const CONTROL_KEY_LENGTH = 2;
 const ZERO_PADDING_CHAR = "0";
 
 export const validateEID = (eid: string) => {
-  const eidYearCode = eid?.substring(1, 3);
-  const eidSexIdentifier = eid?.substring(0, 1);
-  const eidCheckCharacter = eid?.substring(6, 8);
-  const eidPrefix = eid?.substring(0, 6);
+  if (!eid) return false;
 
-  return (
-    isNotEmpty(eid) &&
-    isLengthValid(eid) &&
-    isOnlyDigits(eid) &&
-    isValidSexDigit(eidSexIdentifier) &&
-    isValidEIDYear(eidYearCode) &&
-    isControlKeyValid(eidPrefix, eidCheckCharacter)
-  );
+  const validators = [
+    isLengthValid,
+    isOnlyDigits,
+    (eid: string) => isValidSexDigit(eid.substring(0, 1)),
+    (eid: string) => isValidEIDYear(eid.substring(1, 3)),
+    (eid: string) =>
+      isControlKeyValid(eid.substring(0, 6), eid.substring(6, 8)),
+  ];
+
+  return validators.every((validator) => validator(eid));
 };
 
 const isValidSexDigit = (sexDigit: string) => ELVEN_SEX.includes(sexDigit);
