@@ -9,10 +9,6 @@ describe("EID validation", () => {
     expect(validateEID("")).toBeFalsy();
   });
 
-  it("should return true for 19845606 (valid EID)", () => {
-    expect(validateEID("19845606")).toBeTruthy();
-  });
-
   it("should return false for 198456066 a too long EID)", () => {
     expect(validateEID("198456066")).toBeFalsy();
   });
@@ -43,5 +39,23 @@ describe("EID validation", () => {
 
   it("should return true for 30600233 (correct control key)", () => {
     expect(validateEID("30600233")).toBeTruthy();
+  });
+
+  it("should return true for 29999922 (correct control key)", () => {
+    expect(validateEID("29999922")).toBeTruthy();
+  });
+
+  it("should return true for 19845606 (valid EID)", () => {
+    expect(validateEID("19845606")).toBeTruthy();
+  });
+  it.each([
+    ["19845606", true],
+    ["30600233", true],
+    ["29999922", true],
+    ["11111151", true],
+    ["19800767", true],
+  ])("its representation %s -> %s", (eid, expectedResult) => {
+    const validationResult = validateEID(eid);
+    expect(validationResult).toBeTruthy();
   });
 });
