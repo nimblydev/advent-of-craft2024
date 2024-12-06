@@ -5,7 +5,7 @@
 - [x] 2230 // too short
 - [x] 40000325 // incorrect sex
 - [x] 1ab14599 // incorrect birth year
-- [ ] 19814x08 // incorrect serial number
+- [x] 19814x08 // incorrect serial number
 - [ ] 19912378 // incorrect control key
 
 ## valid EIDs
