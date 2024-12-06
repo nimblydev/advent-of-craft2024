@@ -37,17 +37,6 @@ describe("EID validation", () => {
     expect(validateEID("19912378")).toBeFalsy();
   });
 
-  it("should return true for 30600233 (correct control key)", () => {
-    expect(validateEID("30600233")).toBeTruthy();
-  });
-
-  it("should return true for 29999922 (correct control key)", () => {
-    expect(validateEID("29999922")).toBeTruthy();
-  });
-
-  it("should return true for 19845606 (valid EID)", () => {
-    expect(validateEID("19845606")).toBeTruthy();
-  });
   it.each([
     ["19845606", true],
     ["30600233", true],
