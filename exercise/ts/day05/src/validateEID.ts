@@ -3,17 +3,18 @@ const ELVEN_SEX = ["1", "2", "3"];
 const numericStringPattern = /^\d+$/;
 
 export const validateEID = (eid: string) => {
-  const EidYearValue = eid?.substring(1, 3);
-  const EidSexValue = eid?.substring(0, 1);
-  const EIdControlKeyValue = eid?.substring(7, 8);
+  const eidYearCode = eid?.substring(1, 3);
+  const eidSexIdentifier = eid?.substring(0, 1);
+  const eidCheckCharacter = eid?.substring(7, 8);
+  const eidPrefix = eid?.substring(0, 7);
 
   return (
     !isEmpty(eid) &&
     !lengthIsInvalid(eid) &&
     isOnlyDigits(eid) &&
-    sexDigitValidation(EidSexValue) &&
-    yearValdidation(EidYearValue) &&
-    controlKeyValidation(eid.substring(0, 7), EIdControlKeyValue)
+    sexDigitValidation(eidSexIdentifier) &&
+    yearValdidation(eidYearCode) &&
+    controlKeyValidation(eidPrefix, eidCheckCharacter)
   );
 };
 
@@ -33,5 +34,5 @@ const yearValdidation = (year: string) => {
 
 const controlKeyValidation = (eidPrefix: string, controlKey: string) => {
   const modulo = parseInt(eidPrefix) % 97;
-  return 97 - modulo === parseInt(controlKey);
+  return (97 - modulo).toString().padStart(2, "0") === controlKey;
 };
