@@ -40,4 +40,8 @@ describe("EID validation", () => {
   it("should return false for 19912378 (incoirrectcontrol key)", () => {
     expect(validateEID("19912378")).toBeFalsy();
   });
+
+  it("should return true for 30600233 (correct control key)", () => {
+    expect(validateEID("30600233")).toBeTruthy();
+  });
 });
