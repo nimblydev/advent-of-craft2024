@@ -14,14 +14,13 @@ export const validateEID = (potentialEID: string) =>
 const validateChecksum = (potentialEID: string) =>
   isControlKeyValid(potentialEID);
 
-const isControlKeyValid: Validator = (eid: string) => {
-  const eidPrefix = eid.substring(0, 6);
-  const modulo = parseInt(eidPrefix, 10) % MODULUS;
-  const complementedValue = (MODULUS - modulo)
-    .toString()
-    .padStart(CONTROL_KEY_LENGTH, ZERO_PADDING_CHAR);
+const isControlKeyValid: Validator = (potentialEID: string) =>
+  calculatedKey(extractPrefix(potentialEID)) === extractKey(potentialEID);
 
-  return complementedValue === extractKey(eid);
-};
+const extractPrefix = (potentialEID: string) =>
+  parseInt(potentialEID.substring(0, 6));
 
 const extractKey = (eid: string) => eid.substring(6, 8);
+
+const calculatedKey = (prefix: number) =>
+  (MODULUS - (prefix % MODULUS)).toString();
