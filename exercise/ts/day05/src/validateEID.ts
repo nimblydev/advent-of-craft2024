@@ -2,6 +2,8 @@ const EID_LENGTH = 8;
 const ELVEN_SEX = ["1", "2", "3"];
 const numericStringPattern = /^\d+$/;
 const eidModulus = 97;
+const CONTROL_KEY_LENGTH = 2;
+const ZERO_PADDING_CHAR = "0";
 
 export const validateEID = (eid: string) => {
   const eidYearCode = eid?.substring(1, 3);
@@ -10,31 +12,31 @@ export const validateEID = (eid: string) => {
   const eidPrefix = eid?.substring(0, 6);
 
   return (
-    !isEmpty(eid) &&
-    !lengthIsInvalid(eid) &&
+    isNotEmpty(eid) &&
+    isLengthValid(eid) &&
     isOnlyDigits(eid) &&
-    sexDigitValidation(eidSexIdentifier) &&
-    yearValdidation(eidYearCode) &&
-    controlKeyValidation(eidPrefix, eidCheckCharacter)
+    isValidSexDigit(eidSexIdentifier) &&
+    isValidEIDYear(eidYearCode) &&
+    isControlKeyValid(eidPrefix, eidCheckCharacter)
   );
 };
 
-const sexDigitValidation = (sexDigit: string) => {
-  return ELVEN_SEX.includes(sexDigit);
-};
+const isValidSexDigit = (sexDigit: string) => ELVEN_SEX.includes(sexDigit);
 
-const isEmpty = (eid: string) => eid === null || eid === "";
+const isNotEmpty = (eid: string) => eid !== null && eid !== "";
 
-const lengthIsInvalid = (eid: string) => eid.length !== EID_LENGTH;
+const isLengthValid = (eid: string) => eid.length === EID_LENGTH;
 
 const isOnlyDigits = (eid: string) => numericStringPattern.test(eid);
 
-const yearValdidation = (year: string) => {
-  return isOnlyDigits(year) && year.length === 2;
-};
+const isValidEIDYear = (year: string) =>
+  isOnlyDigits(year) && year.length === 2;
 
-const controlKeyValidation = (eidPrefix: string, controlKey: string) => {
+const isControlKeyValid = (eidPrefix: string, controlKey: string) => {
   const modulo = parseInt(eidPrefix, 10) % eidModulus;
-  const complementedValue = (eidModulus - modulo).toString().padStart(2, "0");
+  const complementedValue = (eidModulus - modulo)
+    .toString()
+    .padStart(CONTROL_KEY_LENGTH, ZERO_PADDING_CHAR);
+
   return complementedValue === controlKey;
 };
