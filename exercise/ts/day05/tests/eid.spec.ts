@@ -1,4 +1,4 @@
-import { validateEID } from "./validateEID";
+import { validateEID } from "../src/validateEID";
 
 describe("EID validation", () => {
   it("should return false for null EID", () => {
@@ -27,5 +27,9 @@ describe("EID validation", () => {
 
   it("should return false for 00000394 (invalid sex digit)", () => {
     expect(validateEID("00000394")).toBe(false);
+  });
+
+  it("should return false for 1ab14599 (invalid characters)", () => {
+    expect(validateEID("1ab14599")).toBe(false);
   });
 });
