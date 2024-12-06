@@ -7,7 +7,8 @@ export const validateEID = (eid: string) =>
   !isEmpty(eid) &&
   !lengthIsInvalid(eid) &&
   isOnlyDigits(eid) &&
-  sexDigitValidation(eid.at(SEX_DIGIT_INDEX));
+  sexDigitValidation(eid.at(SEX_DIGIT_INDEX)) &&
+  yearValdidation(eid.substring(1, 3));
 
 const sexDigitValidation = (sexDigit: string) => {
   return ELVEN_SEX.includes(sexDigit);
@@ -18,3 +19,7 @@ const isEmpty = (eid: string) => eid === null || eid === "";
 const lengthIsInvalid = (eid: string) => eid.length !== EID_LENGTH;
 
 const isOnlyDigits = (eid: string) => numericStringPattern.test(eid);
+
+const yearValdidation = (year: string) => {
+  return isOnlyDigits(year) && year.length === 2;
+};
