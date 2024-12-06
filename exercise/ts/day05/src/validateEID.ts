@@ -12,14 +12,16 @@ export const validateEID = (potentialEID: string) =>
   validIEDPattern.test(potentialEID) && validateChecksum(potentialEID);
 
 const validateChecksum = (potentialEID: string) =>
-  isControlKeyValid(potentialEID, potentialEID.substring(6, 8));
+  isControlKeyValid(potentialEID);
 
-const isControlKeyValid: Validator = (eid: string, controlKeyPart?: string) => {
+const isControlKeyValid: Validator = (eid: string) => {
   const eidPrefix = eid.substring(0, 6);
   const modulo = parseInt(eidPrefix, 10) % MODULUS;
   const complementedValue = (MODULUS - modulo)
     .toString()
     .padStart(CONTROL_KEY_LENGTH, ZERO_PADDING_CHAR);
 
-  return complementedValue === controlKeyPart;
+  return complementedValue === extractKey(eid);
 };
+
+const extractKey = (eid: string) => eid.substring(6, 8);
