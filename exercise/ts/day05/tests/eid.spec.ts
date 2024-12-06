@@ -36,4 +36,8 @@ describe("EID validation", () => {
   it("should return false for 19814x08 (invalid serial number)", () => {
     expect(validateEID("19814x08")).toBeFalsy();
   });
+
+  it("should return false for 19912378 (incoirrectcontrol key)", () => {
+    expect(validateEID("19912378")).toBeFalsy();
+  });
 });
