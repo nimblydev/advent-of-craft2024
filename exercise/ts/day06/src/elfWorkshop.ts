@@ -7,13 +7,13 @@ export class ElfWorkshop {
 
   // best practice: where is the constructor ? it should be used to initialize the taskList
 
-  // we could avoid a primitive type for task and use a Task class
+  // we could avoid a primitive type for task and use a Task class or a structured object
   addTask(task: string): void {
     if (task !== "") {
       this.taskList.push(task);
     }
   }
-  // completeTask() returns a string but it can also return null
+  // typing:  completeTask() returns a string but it can also return null
   completeTask(): string {
     // question: no sorting, so the first task added is the first to be removed ?
     if (this.taskList.length > 0) {
