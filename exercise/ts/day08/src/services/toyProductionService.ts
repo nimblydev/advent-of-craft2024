@@ -8,6 +8,10 @@ export class ToyProductionService {
     this._repository = repository;
   }
 
+  findToyByName(toyName: string): Toy | undefined {
+    return this._repository.findByName(toyName);
+  }
+
   saveNewToy(toy: Toy): void {
     this._repository.save(toy);
   }
