@@ -1,5 +1,5 @@
 export class Toy {
-  static State = {
+  static readonly State = {
     UNASSIGNED: "UNASSIGNED",
     IN_PRODUCTION: "IN_PRODUCTION",
     COMPLETED: "COMPLETED",
@@ -8,7 +8,7 @@ export class Toy {
   private readonly name: string;
   private state: string;
 
-  constructor(name: string, state: string) {
+  constructor(name: string, state: string = Toy.State.UNASSIGNED) {
     this.name = name;
     this.state = state;
   }

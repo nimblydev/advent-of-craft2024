@@ -8,8 +8,8 @@ describe("ToyProductionService", () => {
   it("assignToyToElfShouldPassTheItemInProduction", () => {
     const repository = new InMemoryToyRepository();
     const service = new ToyProductionService(repository);
+    const toy = new Toy(TOY_NAME);
 
-    const toy = new Toy(TOY_NAME, Toy.State.UNASSIGNED);
     service.saveNewToy(toy);
     service.assignToyToElf(TOY_NAME);
 
