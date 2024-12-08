@@ -9,10 +9,10 @@ describe("ToyProductionService", () => {
     const repository = new InMemoryToyRepository();
     const service = new ToyProductionService(repository);
 
-    service.saveNewToy(new Toy(TOY_NAME, Toy.State.UNASSIGNED));
+    const toy = new Toy(TOY_NAME, Toy.State.UNASSIGNED);
+    service.saveNewToy(toy);
     service.assignToyToElf(TOY_NAME);
 
-    const toy = service.findToyByName(TOY_NAME);
-    expect(toy?.getState()).toBe(Toy.State.IN_PRODUCTION);
+    expect(toy.isInProduction()).toBeTruthy();
   });
 });
