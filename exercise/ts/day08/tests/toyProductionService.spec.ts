@@ -12,7 +12,7 @@ describe("ToyProductionService", () => {
     service.saveNewToy(new Toy(TOY_NAME, Toy.State.UNASSIGNED));
     service.assignToyToElf(TOY_NAME);
 
-    const toy = repository.findByName(TOY_NAME);
+    const toy = service.findToyByName(TOY_NAME);
     expect(toy?.getState()).toBe(Toy.State.IN_PRODUCTION);
   });
 });
