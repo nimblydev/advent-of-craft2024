@@ -30,4 +30,8 @@ export class Toy {
       this.setState(Toy.State.IN_PRODUCTION);
     }
   }
+
+  isInProduction(): boolean {
+    return this.getState() === Toy.State.IN_PRODUCTION;
+  }
 }
