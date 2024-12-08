@@ -2,15 +2,19 @@ import { ToyRepository } from "../domain/toyRepository";
 import { Toy } from "../domain/toy";
 
 export class ToyProductionService {
-  private repository: ToyRepository;
+  private readonly _repository: ToyRepository;
 
   constructor(repository: ToyRepository) {
-    this.repository = repository;
+    this._repository = repository;
+  }
+
+  saveNewToy(toy: Toy): void {
+    this._repository.save(toy);
   }
 
   assignToyToElf(toyName: string): void {
-    const toy = this.repository.findByName(toyName);
+    const toy = this._repository.findByName(toyName);
     toy.assignToElf();
-    this.repository.save(toy);
+    this._repository.save(toy);
   }
 }
