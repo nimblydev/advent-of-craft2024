@@ -1,10 +1,11 @@
 import { Child } from "../src/child";
 import { GiftRequest } from "../src/giftRequest";
+import { GiftRequestBuilder } from "./GiftRequestBuilder";
 
 export class ChildBuilder {
   private _firstName: string = "DefaultFirstName";
   private _lastName: string = "DefaultLastName";
-  private _age: number = 0;
+  private _age: number = 9;
   private _behavior: Behavior = "nice";
   private _giftRequest: GiftRequest = new GiftRequest(
     "DefaultGift",
@@ -44,6 +45,16 @@ export class ChildBuilder {
 
   withGiftRequest(giftRequest: GiftRequest): this {
     this._giftRequest = giftRequest;
+    return this;
+  }
+
+  wantingAFeasibleGift(): this {
+    this._giftRequest = new GiftRequestBuilder().whichIsFeasible().build();
+    return this;
+  }
+
+  wantingAnInfeasibleGift(): this {
+    this._giftRequest = new GiftRequestBuilder().whichIsInfeasible().build();
     return this;
   }
 
