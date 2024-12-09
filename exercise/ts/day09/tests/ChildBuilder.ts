@@ -43,8 +43,8 @@ export class ChildBuilder {
     return this;
   }
 
-  withGiftRequest(giftRequest: GiftRequest): this {
-    this._giftRequest = giftRequest;
+  withGiftRequest(giftRequestBuilder: GiftRequestBuilder): this {
+    this._giftRequest = giftRequestBuilder.build();
     return this;
   }
 
