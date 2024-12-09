@@ -10,12 +10,12 @@ describe("santa analyzing child requests", () => {
       .withFirstName("Alice")
       .withLastName("Thomas")
       .withAge(9)
-      .withBehavior("nice")
+      .whoIsNice()
       .withGiftRequest(
         new GiftRequestBuilder()
           .withGiftName("Bicycle")
-          .withFeasible(true)
-          .withImportance("nice to have")
+          .whichIsFeasible()
+          .whichIsNiceToHave()
           .build()
       )
       .build();
@@ -27,12 +27,12 @@ describe("santa analyzing child requests", () => {
       .withFirstName("Noa")
       .withLastName("Thierry")
       .withAge(6)
-      .withBehavior("naughty")
+      .whoIsNaughty()
       .withGiftRequest(
         new GiftRequestBuilder()
           .withGiftName("SomeToy")
-          .withFeasible(true)
-          .withImportance("dream")
+          .whichIsInfeasible()
+          .whichIsDream()
           .build()
       )
       .build();
@@ -44,12 +44,12 @@ describe("santa analyzing child requests", () => {
       .withFirstName("Charlie")
       .withLastName("Joie")
       .withAge(3)
-      .withBehavior("nice")
+      .whoIsNice()
       .withGiftRequest(
         new GiftRequestBuilder()
           .withGiftName("AnotherToy")
-          .withFeasible(false)
-          .withImportance("dream")
+          .whichIsInfeasible()
+          .whichIsDream()
           .build()
       )
       .build();

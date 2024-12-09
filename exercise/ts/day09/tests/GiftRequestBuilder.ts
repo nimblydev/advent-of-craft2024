@@ -15,8 +15,28 @@ export class GiftRequestBuilder {
     return this;
   }
 
+  whichIsFeasible(): this {
+    this._feasible = true;
+    return this;
+  }
+
+  whichIsInfeasible(): this {
+    this._feasible = false;
+    return this;
+  }
+
   withImportance(importance: Priority): this {
     this._importance = importance;
+    return this;
+  }
+
+  whichIsNiceToHave(): this {
+    this._importance = "nice to have";
+    return this;
+  }
+
+  whichIsDream(): this {
+    this._importance = "dream";
     return this;
   }
 

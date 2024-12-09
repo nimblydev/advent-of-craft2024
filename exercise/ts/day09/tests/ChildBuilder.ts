@@ -32,6 +32,16 @@ export class ChildBuilder {
     return this;
   }
 
+  whoIsNaughty(): this {
+    this._behavior = "naughty";
+    return this;
+  }
+
+  whoIsNice(): this {
+    this._behavior = "nice";
+    return this;
+  }
+
   withGiftRequest(giftRequest: GiftRequest): this {
     this._giftRequest = giftRequest;
     return this;
