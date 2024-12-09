@@ -1,5 +1,4 @@
 import { Child } from "../src/child";
-import { GiftRequest } from "../src/giftRequest";
 import { GiftRequestBuilder } from "./GiftRequestBuilder";
 
 export class ChildBuilder {
@@ -7,11 +6,7 @@ export class ChildBuilder {
   private _lastName: string = "DefaultLastName";
   private _age: number = 9;
   private _behavior: Behavior = "nice";
-  private _giftRequest: GiftRequest = new GiftRequest(
-    "DefaultGift",
-    true,
-    "nice to have"
-  );
+  private _giftRequestBuilder: GiftRequestBuilder;
 
   withFirstName(firstName: string): this {
     this._firstName = firstName;
@@ -44,17 +39,17 @@ export class ChildBuilder {
   }
 
   withGiftRequest(giftRequestBuilder: GiftRequestBuilder): this {
-    this._giftRequest = giftRequestBuilder.build();
+    this._giftRequestBuilder = giftRequestBuilder;
     return this;
   }
 
   wantingAFeasibleGift(): this {
-    this._giftRequest = new GiftRequestBuilder().whichIsFeasible().build();
+    this._giftRequestBuilder = new GiftRequestBuilder().whichIsFeasible();
     return this;
   }
 
   wantingAnInfeasibleGift(): this {
-    this._giftRequest = new GiftRequestBuilder().whichIsInfeasible().build();
+    this._giftRequestBuilder = new GiftRequestBuilder().whichIsInfeasible();
     return this;
   }
 
@@ -64,7 +59,7 @@ export class ChildBuilder {
       this._lastName,
       this._age,
       this._behavior,
-      this._giftRequest
+      this._giftRequestBuilder.build()
     );
   }
 }
