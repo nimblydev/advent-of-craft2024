@@ -1,29 +1,26 @@
+const sumArray = (values: Array<number>) =>
+  values.reduce((acc, current) => acc + current, 0);
+
+const isOpeningParenthesis = (c: string) => c === "(";
+
+const isClosingParenthesis = (c: string) => c === ")";
+
 export class Building {
   static whichFloor(instructions: string): number {
-    let val: Array<[string, number]> = [];
+    let val: Array<number> = [];
 
     for (const element of instructions) {
+      let valueToPush: number;
       if (instructions.includes("🧝")) {
-        const j = isClosingParenthesis(element) ? 3 : -2;
-        val.push([element, j]);
+        valueToPush = isClosingParenthesis(element) ? 3 : -2;
       } else if (!instructions.includes("🧝")) {
-        val.push([element, isOpeningParenthesis(element) ? 1 : -1]);
+        valueToPush = isOpeningParenthesis(element) ? 1 : -1;
       } else {
-        val.push([element, isOpeningParenthesis(element) ? 42 : -2]);
+        valueToPush = isOpeningParenthesis(element) ? 42 : -2;
       }
+      val.push(valueToPush);
     }
 
-    return Building.calculateTotalFromTuples(val);
+    return sumArray(val);
   }
-
-  private static calculateTotalFromTuples(val: [string, number][]) {
-    return val.reduce((acc, [_, j]) => acc + j, 0);
-  }
-}
-function isOpeningParenthesis(c: string) {
-  return c === "(";
-}
-
-function isClosingParenthesis(c: string) {
-  return c === ")";
 }
