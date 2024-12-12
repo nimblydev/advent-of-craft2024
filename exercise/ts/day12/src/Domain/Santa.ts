@@ -1,10 +1,13 @@
-import { ChildrenRepository } from "../ChildrenRepository";
+import { IChildrenRepository } from "../Ports/IChildrenRepository";
 import { Child } from "./Child";
 import { Toy } from "./Toy";
 
 export class Santa {
-  private readonly childrenRepository: ChildrenRepository =
-    new ChildrenRepository();
+  private readonly childrenRepository: IChildrenRepository;
+
+  constructor(childrenRepository: IChildrenRepository) {
+    this.childrenRepository = childrenRepository;
+  }
 
   addChild(child: Child): void {
     this.childrenRepository.addChild(child);

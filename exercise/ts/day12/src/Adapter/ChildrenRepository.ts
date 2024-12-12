@@ -1,6 +1,7 @@
-import { Child } from "./gifts/Child";
+import { Child } from "../Domain/Child";
+import { IChildrenRepository } from "../Ports/IChildrenRepository";
 
-export class ChildrenRepository {
+export class ChildrenRepository implements IChildrenRepository {
   private readonly children: Child[] = [];
 
   addChild(child: Child): void {
