@@ -45,7 +45,7 @@ describe("Santa's gift selection process", () => {
 
     santa.addChild(bobby);
 
-    expect(() => santa.chooseToyForChild("alice")).toThrowError(
+    expect(() => santa.chooseToyForChild("alice")).toThrow(
       "No such child found"
     );
   });
