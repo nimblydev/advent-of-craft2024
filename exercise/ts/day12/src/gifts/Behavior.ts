@@ -3,7 +3,7 @@ export class Behavior {
   public static readonly NICE = new Behavior("nice");
   public static readonly VERY_NICE = new Behavior("very nice");
 
-  private constructor(public readonly value: string) {}
+  private constructor(private readonly _value: string) {}
 
   public isNaughty(): boolean {
     return this === Behavior.NAUGHTY;
@@ -13,5 +13,8 @@ export class Behavior {
   }
   public isVeryNice(): boolean {
     return this === Behavior.VERY_NICE;
+  }
+  public getType(): string {
+    return this._value;
   }
 }

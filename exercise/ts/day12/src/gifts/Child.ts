@@ -12,14 +12,15 @@ export class Child {
   }
 
   getMeritedGift(): Toy {
-    if (this.behavior.isNaughty()) {
-      return this.wishlist.getThirdChoice();
-    } else if (this.behavior.isNice()) {
-      return this.wishlist.getSecondChoice();
-    } else if (this.behavior.isVeryNice()) {
-      return this.wishlist.getFirstChoice();
-    }
+    const behaviorToChoiceMap = {
+      naughty: this.wishlist.getThirdChoice(),
+      nice: this.wishlist.getSecondChoice(),
+      veryNice: this.wishlist.getFirstChoice(),
+    };
 
-    throw new Error("Unknown behavior");
+    return (
+      behaviorToChoiceMap[this.behavior.getType()] ||
+      new Error("Unknown behavior")
+    );
   }
 }
