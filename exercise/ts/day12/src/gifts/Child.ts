@@ -4,20 +4,19 @@ import { WhishList } from "./WhisList";
 
 export class Child {
   public wishlist: WhishList;
-  public behavior: Behavior;
 
-  constructor(public name: string, behavior: Behavior) {}
+  constructor(public name: string, public behavior: Behavior) {}
 
   setWishlist(firstChoice: Toy, secondChoice: Toy, thirdChoice: Toy): void {
     this.wishlist = new WhishList([firstChoice, secondChoice, thirdChoice]);
   }
 
   getMeritedGift(): Toy {
-    if (this.behavior === Behavior.NAUGHTY) {
+    if (this.behavior.isNaughty()) {
       return this.wishlist.getThirdChoice();
-    } else if (this.behavior === Behavior.NICE) {
+    } else if (this.behavior.isNice()) {
       return this.wishlist.getSecondChoice();
-    } else if (this.behavior === Behavior.VERY_NICE) {
+    } else if (this.behavior.isVeryNice()) {
       return this.wishlist.getFirstChoice();
     }
 

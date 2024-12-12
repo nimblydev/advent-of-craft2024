@@ -4,4 +4,14 @@ export class Behavior {
   public static readonly VERY_NICE = new Behavior("very nice");
 
   private constructor(public readonly value: string) {}
+
+  public isNaughty(): boolean {
+    return this === Behavior.NAUGHTY;
+  }
+  public isNice(): boolean {
+    return this === Behavior.NICE;
+  }
+  public isVeryNice(): boolean {
+    return this === Behavior.VERY_NICE;
+  }
 }
