@@ -3,7 +3,7 @@ import { Child } from "../src/Domain/Child";
 import { Santa } from "../src/Domain/Santa";
 import { InMemoryChildrenRepository } from "../src/Adapter/InMemoryChildrenRepository";
 import { ChildBuilder } from "./childBuilder";
-
+import { Option } from "effect";
 describe("Santa's gift selection process", () => {
   const Playstation = new Toy("playstation");
   const Ball = new Toy("ball");
@@ -47,8 +47,6 @@ describe("Santa's gift selection process", () => {
 
     santa.addChild(bobby);
 
-    expect(() => santa.chooseToyForChild("alice")).toThrow(
-      "No such child found"
-    );
+    expect(santa.chooseToyForChild("alice")).toBe(Option.none());
   });
 });

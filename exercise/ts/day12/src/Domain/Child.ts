@@ -1,6 +1,7 @@
 import { Behavior, NAUGHTY, NICE, VERY_NICE } from "./Behavior";
 import { Toy } from "./Toy";
 import { WhishList } from "./WhisList";
+import { Option, none } from "effect/Option";
 
 export class Child {
   public wishList: WhishList;
@@ -11,16 +12,13 @@ export class Child {
     this.wishList = new WhishList([firstChoice, secondChoice, thirdChoice]);
   }
 
-  getMeritedGift(): Toy {
+  getMeritedGift(): Option<Toy> {
     const behaviorToChoiceMap = {
       [NAUGHTY]: this.wishList.getThirdChoice(),
       [NICE]: this.wishList.getSecondChoice(),
       [VERY_NICE]: this.wishList.getFirstChoice(),
     };
 
-    return (
-      behaviorToChoiceMap[this.behavior.getType()] ||
-      new Error("Unknown behavior")
-    );
+    return behaviorToChoiceMap[this.behavior.getType()] || none<Toy>();
   }
 }
