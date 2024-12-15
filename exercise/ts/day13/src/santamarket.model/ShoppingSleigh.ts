@@ -43,14 +43,15 @@ export class ShoppingSleigh {
         if (offer.offerType === SpecialOfferType.THREE_FOR_TWO) {
           x = 3;
           y = 2;
-          const numberOfXs = Math.floor(quantityAsInt / x);
-          if (quantityAsInt >= x) {
-            const discountedPrice =
-              numberOfXs * y * unitPrice + (quantityAsInt % x) * unitPrice;
-
-            discountAmount = nonDiscountedPrice - discountedPrice;
-            discountLabel = `${x} for ${y}`;
-          }
+          ({ discountAmount, discountLabel } = this.xForYDiscountCalculation(
+            quantityAsInt,
+            x,
+            y,
+            unitPrice,
+            discountAmount,
+            nonDiscountedPrice,
+            discountLabel
+          ));
         }
 
         if (offer.offerType === SpecialOfferType.TWO_FOR_AMOUNT) {
@@ -88,5 +89,25 @@ export class ShoppingSleigh {
         }
       }
     });
+  }
+
+  private xForYDiscountCalculation(
+    quantityAsInt: number,
+    x: number,
+    y: number,
+    unitPrice: number,
+    discountAmount: number,
+    nonDiscountedPrice: number,
+    discountLabel: string
+  ) {
+    const numberOfXs = Math.floor(quantityAsInt / x);
+    if (quantityAsInt >= x) {
+      const discountedPrice =
+        numberOfXs * y * unitPrice + (quantityAsInt % x) * unitPrice;
+
+      discountAmount = nonDiscountedPrice - discountedPrice;
+      discountLabel = `${x} for ${y}`;
+    }
+    return { discountAmount, discountLabel };
   }
 }

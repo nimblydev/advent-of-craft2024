@@ -1,7 +1,9 @@
 - [ ] Deploy a generic method to compute the `X for Y` discount offers, covering `Three for two` and `Two for one` offers
   - [x] 👍 Prepare the code for an easy addition of the `X for Y` discount type family
     - [x] Add a X_FOR_Y in SpecialOfferType enum
-    - [ ] ...
+    - [x] Refacto: uniformize the code for each case of handleOffers
+    - [x] refacto: factorize instructions
+    - [x] refacto: extract THREE_FOR_TWO calculation in the xForYDiscountCalculation method
   - [ ] 👍 Implement the `Two for one` discount computation
     - [ ] ...
   - [ ] 👍 Refactor the existing code to use the `X for Y` discount computation method with the `Three for two` discount
