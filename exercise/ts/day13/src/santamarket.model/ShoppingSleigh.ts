@@ -35,8 +35,10 @@ export class ShoppingSleigh {
         const quantityAsInt = Math.floor(quantity);
         const nonDiscountedPrice = quantity * unitPrice;
         let discount: Discount | null = null;
+        let discountLabel: string;
+        let discountAmount: number;
         let x = 1;
-        let y = 2;
+        let y: number;
 
         if (offer.offerType === SpecialOfferType.THREE_FOR_TWO) {
           x = 3;
@@ -45,9 +47,9 @@ export class ShoppingSleigh {
           if (quantityAsInt >= x) {
             const discountedPrice =
               numberOfXs * y * unitPrice + (quantityAsInt % x) * unitPrice;
-            const discountLabel = `${x} for ${y}`;
-            const discountAmount = nonDiscountedPrice - discountedPrice;
-            discount = new Discount(product, discountLabel, -discountAmount);
+
+            discountAmount = nonDiscountedPrice - discountedPrice;
+            discountLabel = `${x} for ${y}`;
           }
         }
 
@@ -58,8 +60,8 @@ export class ShoppingSleigh {
               offer.argument * Math.floor(quantityAsInt / x) +
               (quantityAsInt % x) * unitPrice;
 
-            const dicountLabel = `${x} for ${offer.argument}`;
-            const discountAmount = nonDiscountedPrice - discountedPrice;
+            discountAmount = nonDiscountedPrice - discountedPrice;
+            discountLabel = `${x} for ${offer.argument}`;
           }
         }
 
@@ -69,18 +71,18 @@ export class ShoppingSleigh {
           if (quantityAsInt >= x) {
             const discountedPrice =
               offer.argument * numberOfXs + (quantityAsInt % x) * unitPrice;
-            const discountAmount = nonDiscountedPrice - discountedPrice;
-            const discountLabel = `${x} for ${offer.argument}`;
-            discount = new Discount(product, discountLabel, -discountAmount);
+
+            discountAmount = nonDiscountedPrice - discountedPrice;
+            discountLabel = `${x} for ${offer.argument}`;
           }
         }
 
         if (offer.offerType === SpecialOfferType.TEN_PERCENT_DISCOUNT) {
-          const discountAmount = quantity * unitPrice * (offer.argument / 100);
-          const discountLabel = `${offer.argument}% off`;
-          discount = new Discount(product, discountLabel, -discountAmount);
+          discountAmount = quantity * unitPrice * (offer.argument / 100);
+          discountLabel = `${offer.argument}% off`;
         }
 
+        discount = new Discount(product, discountLabel, -discountAmount);
         if (discount) {
           receipt.addDiscount(discount);
         }
