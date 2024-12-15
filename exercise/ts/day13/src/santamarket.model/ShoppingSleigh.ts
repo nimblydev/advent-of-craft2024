@@ -70,12 +70,14 @@ export class ShoppingSleigh {
           x = 5;
           const numberOfXs = Math.floor(quantityAsInt / x);
           if (quantityAsInt >= x) {
-            const discountAmount =
-              unitPrice * quantity -
-              (offer.argument * numberOfXs + (quantityAsInt % 5) * unitPrice);
+            const nonDiscountedPrice = quantity * unitPrice;
+            const discountedPrice =
+              offer.argument * numberOfXs + (quantityAsInt % x) * unitPrice;
+            const discountAmount = nonDiscountedPrice - discountedPrice;
+
             discount = new Discount(
               product,
-              `5 for ${offer.argument}`,
+              `${x} for ${offer.argument}`,
               -discountAmount
             );
           }
