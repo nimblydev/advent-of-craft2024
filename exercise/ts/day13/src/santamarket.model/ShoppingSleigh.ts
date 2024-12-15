@@ -53,13 +53,14 @@ export class ShoppingSleigh {
         if (offer.offerType === SpecialOfferType.TWO_FOR_AMOUNT) {
           x = 2;
           if (quantityAsInt >= x) {
-            const total =
+            const discountedPrice =
               offer.argument * Math.floor(quantityAsInt / x) +
-              (quantityAsInt % 2) * unitPrice;
-            const discountAmount = unitPrice * quantity - total;
+              (quantityAsInt % x) * unitPrice;
+            const nonDiscountedPrice = quantity * unitPrice;
+            const discountAmount = nonDiscountedPrice - discountedPrice;
             discount = new Discount(
               product,
-              `2 for ${offer.argument}`,
+              `${x} for ${offer.argument}`,
               -discountAmount
             );
           }
