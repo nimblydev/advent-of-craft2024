@@ -33,6 +33,7 @@ export class ShoppingSleigh {
         const offer = offers.get(product)!;
         const unitPrice = catalog.getUnitPrice(product);
         const quantityAsInt = Math.floor(quantity);
+        const nonDiscountedPrice = quantity * unitPrice;
         let discount: Discount | null = null;
         let x = 1;
         let y = 2;
@@ -44,9 +45,9 @@ export class ShoppingSleigh {
           if (quantityAsInt >= x) {
             const discountedPrice =
               numberOfXs * y * unitPrice + (quantityAsInt % x) * unitPrice;
-            const nonDiscountedPrice = quantity * unitPrice;
+            const discountLabel = `${x} for ${y}`;
             const discountAmount = nonDiscountedPrice - discountedPrice;
-            discount = new Discount(product, "3 for 2", -discountAmount);
+            discount = new Discount(product, discountLabel, -discountAmount);
           }
         }
 
@@ -56,13 +57,9 @@ export class ShoppingSleigh {
             const discountedPrice =
               offer.argument * Math.floor(quantityAsInt / x) +
               (quantityAsInt % x) * unitPrice;
-            const nonDiscountedPrice = quantity * unitPrice;
+
+            const dicountLabel = `${x} for ${offer.argument}`;
             const discountAmount = nonDiscountedPrice - discountedPrice;
-            discount = new Discount(
-              product,
-              `${x} for ${offer.argument}`,
-              -discountAmount
-            );
           }
         }
 
@@ -70,26 +67,18 @@ export class ShoppingSleigh {
           x = 5;
           const numberOfXs = Math.floor(quantityAsInt / x);
           if (quantityAsInt >= x) {
-            const nonDiscountedPrice = quantity * unitPrice;
             const discountedPrice =
               offer.argument * numberOfXs + (quantityAsInt % x) * unitPrice;
             const discountAmount = nonDiscountedPrice - discountedPrice;
-
-            discount = new Discount(
-              product,
-              `${x} for ${offer.argument}`,
-              -discountAmount
-            );
+            const discountLabel = `${x} for ${offer.argument}`;
+            discount = new Discount(product, discountLabel, -discountAmount);
           }
         }
 
         if (offer.offerType === SpecialOfferType.TEN_PERCENT_DISCOUNT) {
-          const discountAmount = -quantity * unitPrice * (offer.argument / 100);
-          discount = new Discount(
-            product,
-            `${offer.argument}% off`,
-            discountAmount
-          );
+          const discountAmount = quantity * unitPrice * (offer.argument / 100);
+          const discountLabel = `${offer.argument}% off`;
+          discount = new Discount(product, discountLabel, -discountAmount);
         }
 
         if (discount) {
