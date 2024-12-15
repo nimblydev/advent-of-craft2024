@@ -32,7 +32,7 @@ export class ShoppingSleigh {
       if (offers.has(product)) {
         const offer = offers.get(product)!;
         const unitPrice = catalog.getUnitPrice(product);
-        const quantityAsInt = Math.floor(quantity);
+
         const nonDiscountedPrice = quantity * unitPrice;
         let discount: Discount | null = null;
         let discountLabel: string;
@@ -43,19 +43,19 @@ export class ShoppingSleigh {
         if (offer.offerType === SpecialOfferType.THREE_FOR_TWO) {
           x = 3;
           y = 2;
+
           ({ discountAmount, discountLabel } = this.xForYDiscountCalculation(
-            quantityAsInt,
+            quantity,
             x,
             y,
             unitPrice,
-            discountAmount,
-            nonDiscountedPrice,
-            discountLabel
+            nonDiscountedPrice
           ));
         }
 
         if (offer.offerType === SpecialOfferType.TWO_FOR_AMOUNT) {
           x = 2;
+          const quantityAsInt = Math.floor(quantity);
           if (quantityAsInt >= x) {
             const discountedPrice =
               offer.argument * Math.floor(quantityAsInt / x) +
@@ -68,6 +68,7 @@ export class ShoppingSleigh {
 
         if (offer.offerType === SpecialOfferType.FIVE_FOR_AMOUNT) {
           x = 5;
+          const quantityAsInt = Math.floor(quantity);
           const numberOfXs = Math.floor(quantityAsInt / x);
           if (quantityAsInt >= x) {
             const discountedPrice =
@@ -92,22 +93,22 @@ export class ShoppingSleigh {
   }
 
   private xForYDiscountCalculation(
-    quantityAsInt: number,
+    quantity: number,
     x: number,
     y: number,
     unitPrice: number,
-    discountAmount: number,
-    nonDiscountedPrice: number,
-    discountLabel: string
-  ) {
+    nonDiscountedPrice: number
+  ): { discountAmount: number; discountLabel: string } | null {
+    const quantityAsInt = Math.floor(quantity);
     const numberOfXs = Math.floor(quantityAsInt / x);
-    if (quantityAsInt >= x) {
-      const discountedPrice =
-        numberOfXs * y * unitPrice + (quantityAsInt % x) * unitPrice;
-
-      discountAmount = nonDiscountedPrice - discountedPrice;
-      discountLabel = `${x} for ${y}`;
+    if (quantityAsInt < x) {
+      return null;
     }
-    return { discountAmount, discountLabel };
+    const discountedPrice =
+      numberOfXs * y * unitPrice + (quantityAsInt % x) * unitPrice;
+    return {
+      discountAmount: nonDiscountedPrice - discountedPrice,
+      discountLabel: `${x} for ${y}`,
+    };
   }
 }
