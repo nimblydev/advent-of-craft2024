@@ -26,7 +26,14 @@ export class Inventory extends Map<string, Gift> {
 }
 
 export class WishList extends Map<Child, Gift> {
-  identifyGift(child: Child): Gift | undefined {
-    return this.get(child);
+  identifyGift(child: Child): Either.Either<Gift, Error> {
+    const gift = this.get(child);
+    return gift
+      ? Either.right(gift)
+      : Either.left(
+          new Error(
+            `Missing gift: Missing gift: ${child.name} wasn't nice this year!`
+          )
+        );
   }
 }

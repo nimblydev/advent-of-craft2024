@@ -1,6 +1,7 @@
 import { Child, Gift, Sleigh } from "./models";
 import { Factory, Inventory, WishList } from "./dependencies";
-import { Either } from "effect";
+import { Effect, Either, pipe } from "effect";
+import { set } from "effect/HashMap";
 
 export class Business {
   constructor(
@@ -12,20 +13,20 @@ export class Business {
   loadGiftsInSleigh(...children: Child[]): Sleigh {
     const sleigh = new Sleigh();
     children.forEach((child) => {
-      const gift = this.wishList.identifyGift(child);
-      if (gift) {
-        const finalGift = Either.flatMap(
-          this.factory.findManufacturedGift(gift),
-          (manufacturedGift) =>
-            this.inventory.pickUpGift(manufacturedGift.barCode)
-        );
+      const setSleigh = (gift: Gift) =>
+        sleigh.set(child, `Gift: ${gift.name} has been loaded!`);
 
-        Either.match(finalGift, {
-          onLeft: (failedGift) => console.log(failedGift.message),
-          onRight: (gift) =>
-            sleigh.set(child, `Gift: ${gift.name} has been loaded!`),
-        });
-      }
+      const program = pipe(
+        child,
+        (child) => this.wishList.identifyGift(child),
+        Effect.flatMap((gift) => this.factory.findManufacturedGift(gift)),
+        Effect.flatMap((manufacturedGift) =>
+          this.inventory.pickUpGift(manufacturedGift.barCode)
+        ),
+        Effect.map((gift) => setSleigh(gift))
+      );
+
+      Effect.runPromise(program);
     });
     return sleigh;
   }
