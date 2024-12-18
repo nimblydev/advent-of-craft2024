@@ -1,13 +1,16 @@
 import { X5T78 } from "../src/children/db2/x5T78";
-import { Child, Gender } from "../src/children/dtos/child";
+import { Child } from "../src/children/dtos/child";
 import { ChildMapper } from "../src/children/childMapper";
 import fc from "fast-check";
-fc.configureGlobal({ numRuns: 100 });
-fc.configureGlobal({
-  seed: 12345,
-});
+
+const SEED = 12345;
+const NUM_RUNS = 100;
 
 describe("ChildMapper", () => {
+  fc.configureGlobal({ numRuns: NUM_RUNS });
+  fc.configureGlobal({
+    seed: SEED,
+  });
   it("should map X5T78 to Child (Girl)", () => {
     fc.assert(
       fc.property(
