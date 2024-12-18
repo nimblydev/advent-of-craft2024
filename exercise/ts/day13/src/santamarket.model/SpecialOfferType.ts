@@ -4,4 +4,5 @@ export enum SpecialOfferType {
   TWO_FOR_AMOUNT,
   FIVE_FOR_AMOUNT,
   X_FOR_Y,
+  TWO_FOR_ONE,
 }

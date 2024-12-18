@@ -86,6 +86,47 @@ describe("Santamarket Tests", () => {
     expect(receipt.getItems()[0]).toStrictEqual(expectedReceiptItem);
   });
 
+  it.each([
+    [4, 2, -2],
+    [5, 3, -2],
+    [6, 3, -3],
+    [7, 4, -3],
+  ])(
+    "applies two for one discount",
+    (quantity, expectedTotalPrice, expectedDiscountAmount) => {
+      const unitPrice = 1.0;
+      const catalog = new FakeCatalog();
+      const teddyBear = new Product("teddyBear", ProductUnit.EACH);
+      catalog.addProduct(teddyBear, unitPrice);
+
+      const elf = new ChristmasElf(catalog);
+      elf.addSpecialOffer(SpecialOfferType.TWO_FOR_ONE, teddyBear, 0);
+
+      const sleigh = new ShoppingSleigh();
+      sleigh.addItemQuantity(teddyBear, quantity);
+
+      const receipt = elf.checksOutArticlesFrom(sleigh);
+
+      const expectedNonDiscountedPrice = quantity * unitPrice;
+
+      const expectedReceiptItem = new ReceiptItem(
+        teddyBear,
+        quantity,
+        unitPrice,
+        expectedNonDiscountedPrice
+      );
+      const expectedDiscount = new Discount(
+        teddyBear,
+        "2 for 1",
+        expectedDiscountAmount
+      );
+
+      expect(receipt.getTotalPrice()).toBeCloseTo(expectedTotalPrice, 0.001);
+      expect(receipt.getDiscounts()[0]).toStrictEqual(expectedDiscount);
+      expect(receipt.getItems()[0]).toStrictEqual(expectedReceiptItem);
+    }
+  );
+
   it("applies two for amount discount", () => {
     const catalog = new FakeCatalog();
     const teddyBear = new Product("teddyBear", ProductUnit.EACH);

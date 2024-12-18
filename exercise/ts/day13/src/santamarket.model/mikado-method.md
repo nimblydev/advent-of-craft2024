@@ -4,8 +4,8 @@
     - [x] Refacto: uniformize the code for each case of handleOffers
     - [x] refacto: factorize instructions
     - [x] refacto: extract THREE_FOR_TWO calculation in the xForYDiscountCalculation method
-  - [ ] 👍 Implement the `Two for one` discount computation
-    - [ ] ...
-  - [ ] 👍 Refactor the existing code to use the `X for Y` discount computation method with the `Three for two` discount
+    - [x] refacto: simplify parameters of xForYDsicountCalculation (use product Object)
+  - [x] 👍 Implement the `Two for one` discount computation
+  - [x] 👍 Refactor the existing code to use the `X for Y` discount computation method with the `Three for two` discount
 - [ ] Parking-Lot (any change with no direct impact on the main goal)
   - [ ] ...{{title}}
