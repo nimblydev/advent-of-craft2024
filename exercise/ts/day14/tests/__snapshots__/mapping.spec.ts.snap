@@ -1,0 +1,1801 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 1`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 68,
+    "Number": "960",
+    "Street": "Re^S#H",
+  },
+  "BirthCity": """,
+  "BirthDate": "$",
+  "FirstName": "|f",
+  "Gender": "Girl",
+  "Id": "",
+  "LastName": "_4"#c!"%&",
+  "MiddleName": "Iri5<0Ly",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 2`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 735,
+    "Number": "548",
+    "Street": "PA;",
+  },
+  "BirthCity": "9lmdZ1E",
+  "BirthDate": "",
+  "FirstName": "oL",
+  "Gender": "Boy",
+  "Id": "!de",
+  "LastName": "w%R7/$\`",
+  "MiddleName": ")ox",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 3`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 7,
+    "Number": "5",
+    "Street": "",
+  },
+  "BirthCity": "$",
+  "BirthDate": "key",
+  "FirstName": "}mfY",
+  "Gender": "Girl",
+  "Id": "(4",
+  "LastName": "1z#!Cz"&8W",
+  "MiddleName": "",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 4`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 382,
+    "Number": "10",
+    "Street": "",
+  },
+  "BirthCity": "",
+  "BirthDate": """,
+  "FirstName": ">!e",
+  "Gender": "Boy",
+  "Id": "",
+  "LastName": "$X'",
+  "MiddleName": "[ R$0*:GGk",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 5`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 2,
+    "Number": "5",
+    "Street": "valueOf",
+  },
+  "BirthCity": "1#",
+  "BirthDate": "}ln6Z{H",
+  "FirstName": "I^w",
+  "Gender": "Boy",
+  "Id": "^",
+  "LastName": "length",
+  "MiddleName": "O[[/tZi",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 6`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 9,
+    "Number": "427",
+    "Street": "p@?,",
+  },
+  "BirthCity": "kku",
+  "BirthDate": "$z"!$",
+  "FirstName": "",
+  "Gender": "Boy",
+  "Id": "x",
+  "LastName": "{oh&y1}B3d",
+  "MiddleName": "T(",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 7`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 7,
+    "Number": "582",
+    "Street": "#LFAr#W-",
+  },
+  "BirthCity": "vDiR",
+  "BirthDate": "~#%~&|#",
+  "FirstName": "<?jep",
+  "Gender": "Girl",
+  "Id": "Vzl(g",
+  "LastName": "val",
+  "MiddleName": "TghHpAX9q]",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 8`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 354,
+    "Number": "959",
+    "Street": "",
+  },
+  "BirthCity": "wx4",
+  "BirthDate": "0G8j$o1",
+  "FirstName": "%",
+  "Gender": "Girl",
+  "Id": "R /fo>9[g",
+  "LastName": "r",
+  "MiddleName": "w9"8D#b2m]",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 9`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 311,
+    "Number": "997",
+    "Street": "",
+  },
+  "BirthCity": "!"B&M"#",
+  "BirthDate": "u8}_!aJn",
+  "FirstName": "efi",
+  "Gender": "Girl",
+  "Id": "C!",
+  "LastName": "%W 1j",
+  "MiddleName": "lCg&4a1",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 10`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 786,
+    "Number": "906",
+    "Street": "",
+  },
+  "BirthCity": "8",
+  "BirthDate": "rvJ",
+  "FirstName": "&"",
+  "Gender": "Boy",
+  "Id": "<ijs",
+  "LastName": "u",
+  "MiddleName": "%{>Yk/(qhj",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 11`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 347,
+    "Number": "191",
+    "Street": "b^N$",
+  },
+  "BirthCity": "~uHE\`Pqb",
+  "BirthDate": "^kgsp~)",
+  "FirstName": "",
+  "Gender": "Girl",
+  "Id": "",
+  "LastName": "Duj+&T",
+  "MiddleName": "c",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 12`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 84,
+    "Number": "136",
+    "Street": "}H]"",
+  },
+  "BirthCity": "o"rn!",
+  "BirthDate": "&",
+  "FirstName": "",
+  "Gender": "Boy",
+  "Id": "\`",
+  "LastName": "eH/NhS^",
+  "MiddleName": ""QC1w/",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 13`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 300,
+    "Number": "946",
+    "Street": "M:fpKUU",
+  },
+  "BirthCity": "",
+  "BirthDate": "?:",
+  "FirstName": "L;nj",
+  "Gender": "Boy",
+  "Id": "\\",
+  "LastName": "RK",
+  "MiddleName": "",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 14`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 3,
+    "Number": "992",
+    "Street": "m3CuA",
+  },
+  "BirthCity": "Mx2@a5*",
+  "BirthDate": "KYO",
+  "FirstName": "K",
+  "Gender": "Boy",
+  "Id": "HT<,?",
+  "LastName": "JK8&dXh :",
+  "MiddleName": "lengttCNha",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 15`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 568,
+    "Number": "726",
+    "Street": "fs{",
+  },
+  "BirthCity": "J,*p!=r",
+  "BirthDate": "m Sy",
+  "FirstName": "Ey7dxr[Y",
+  "Gender": "Boy",
+  "Id": "WZ>P1mC",
+  "LastName": "",
+  "MiddleName": "Q06$df22*",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 16`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 9,
+    "Number": "993",
+    "Street": "t!smu",
+  },
+  "BirthCity": "g",
+  "BirthDate": "fx?&%AK~",
+  "FirstName": "~L~w'\\",
+  "Gender": "Girl",
+  "Id": "PZ1",
+  "LastName": "%construc",
+  "MiddleName": "=Xyn-D",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 17`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 523,
+    "Number": "999",
+    "Street": "f Jg#y",
+  },
+  "BirthCity": "G",
+  "BirthDate": "b",
+  "FirstName": "f%JdJ@W",
+  "Gender": "Girl",
+  "Id": "",
+  "LastName": "V.E&1AwGx\`",
+  "MiddleName": "l_",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 18`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 13,
+    "Number": "997",
+    "Street": "p,",
+  },
+  "BirthCity": "%$Tz$#::",
+  "BirthDate": "LRg|z& #",
+  "FirstName": "ceK",
+  "Gender": "Boy",
+  "Id": "m",
+  "LastName": "RisPr",
+  "MiddleName": "y'0R07@c<",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 19`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 997,
+    "Number": "7",
+    "Street": "",
+  },
+  "BirthCity": "",
+  "BirthDate": "n9M"",
+  "FirstName": "rq6L\\Zl:oa",
+  "Gender": "Girl",
+  "Id": "?mr[vz8$z",
+  "LastName": "k]7^<?V#",
+  "MiddleName": "A%$*R",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 20`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 32,
+    "Number": "998",
+    "Street": "aMk",
+  },
+  "BirthCity": "7",
+  "BirthDate": "=q",
+  "FirstName": "&?2cZhi)<",
+  "Gender": "Girl",
+  "Id": "R?b",
+  "LastName": "voO",
+  "MiddleName": "v",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 21`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 236,
+    "Number": "593",
+    "Street": "E?We!r",
+  },
+  "BirthCity": "t",
+  "BirthDate": "kfGOc*Y",
+  "FirstName": ""W",
+  "Gender": "Boy",
+  "Id": "",
+  "LastName": "5Sr!WsJ\`b#",
+  "MiddleName": "",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 22`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 4,
+    "Number": "993",
+    "Street": "bind__defi",
+  },
+  "BirthCity": "rc9|d",
+  "BirthDate": "KO",
+  "FirstName": "<"wCar2&",
+  "Gender": "Girl",
+  "Id": "Tvh~_It",
+  "LastName": ")L",
+  "MiddleName": "%",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 23`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 996,
+    "Number": "334",
+    "Street": "))IMP@L",
+  },
+  "BirthCity": "3j{;!",
+  "BirthDate": "A||||Zy",
+  "FirstName": "T#,kR",
+  "Gender": "Boy",
+  "Id": "F_>ffU%d ",
+  "LastName": "73;",
+  "MiddleName": "",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 24`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 261,
+    "Number": "992",
+    "Street": "eC",
+  },
+  "BirthCity": "}q0~I",
+  "BirthDate": "VFZ /",
+  "FirstName": "J$m-L",
+  "Gender": "Boy",
+  "Id": "Y",
+  "LastName": "&c+L",
+  "MiddleName": "@6A|",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 25`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 684,
+    "Number": "773",
+    "Street": "pYA",
+  },
+  "BirthCity": ",:dOk2xV",
+  "BirthDate": """,
+  "FirstName": ")g",
+  "Gender": "Boy",
+  "Id": "*3typ y",
+  "LastName": "C3",
+  "MiddleName": "_",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 26`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 9,
+    "Number": "922",
+    "Street": "vPf1N",
+  },
+  "BirthCity": "NR,P",
+  "BirthDate": "key",
+  "FirstName": "}v1c",
+  "Gender": "Boy",
+  "Id": "a(C",
+  "LastName": "/H;F",
+  "MiddleName": "r",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 27`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 9,
+    "Number": "637",
+    "Street": "#z~M.N"};y",
+  },
+  "BirthCity": "x4?..7I/EE",
+  "BirthDate": "NIq18m7",
+  "FirstName": "Uk%",
+  "Gender": "Girl",
+  "Id": "# kx*2M3",
+  "LastName": "X2P+oIF",
+  "MiddleName": "toString",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 28`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 996,
+    "Number": "678",
+    "Street": "x1}",
+  },
+  "BirthCity": "g\`1d:V.",
+  "BirthDate": "5l'g$v5OI",
+  "FirstName": "vPZ)PIS",
+  "Gender": "Boy",
+  "Id": "IjOq;&0O.",
+  "LastName": "K3J#n",
+  "MiddleName": "=v]![S",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 29`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 375,
+    "Number": "672",
+    "Street": "LxF",
+  },
+  "BirthCity": ":DDN,2#( |",
+  "BirthDate": "M",
+  "FirstName": "*\\//:hi.+",
+  "Gender": "Boy",
+  "Id": "~Hz$%",
+  "LastName": "",
+  "MiddleName": "+L\\9u=5-H",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 30`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 317,
+    "Number": "7",
+    "Street": "& %prop",
+  },
+  "BirthCity": "k",
+  "BirthDate": "?DR>",
+  "FirstName": "%x!lzz"",
+  "Gender": "Girl",
+  "Id": "(!",
+  "LastName": "",
+  "MiddleName": "7",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 31`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 994,
+    "Number": "103",
+    "Street": "TE[s",
+  },
+  "BirthCity": "",
+  "BirthDate": "",
+  "FirstName": "hyu ga4",
+  "Gender": "Girl",
+  "Id": "\\n[y5cT?.",
+  "LastName": "H[~HI{Gy[C",
+  "MiddleName": "/\`wY",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 32`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 553,
+    "Number": "537",
+    "Street": "IX3",
+  },
+  "BirthCity": "H/BF1#1}:",
+  "BirthDate": "I)q'&",
+  "FirstName": "G&#",
+  "Gender": "Girl",
+  "Id": "bind",
+  "LastName": "",
+  "MiddleName": "1_",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 33`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 426,
+    "Number": "677",
+    "Street": ""bm_P=",
+  },
+  "BirthCity": "@^&<V%IC6=",
+  "BirthDate": "",
+  "FirstName": "V.!U~",
+  "Gender": "Girl",
+  "Id": "46SRB\`}cS",
+  "LastName": "|",
+  "MiddleName": "@",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 34`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 5,
+    "Number": "133",
+    "Street": "",
+  },
+  "BirthCity": "mQD!",
+  "BirthDate": "% OU"",
+  "FirstName": "6",
+  "Gender": "Girl",
+  "Id": "|"D",
+  "LastName": "",
+  "MiddleName": "Y_cf-q+QfQ",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 35`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 591,
+    "Number": "995",
+    "Street": "]~^x",
+  },
+  "BirthCity": "Yues",
+  "BirthDate": "",
+  "FirstName": "ref",
+  "Gender": "Boy",
+  "Id": "Q>R:KsT;a",
+  "LastName": "",
+  "MiddleName": "t"2Vm",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 36`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 78,
+    "Number": "170",
+    "Street": "*",
+  },
+  "BirthCity": "toString",
+  "BirthDate": "",
+  "FirstName": ",tZ'"1<T",
+  "Gender": "Boy",
+  "Id": "",
+  "LastName": ",[+",
+  "MiddleName": "U",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 37`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 639,
+    "Number": "1",
+    "Street": "A%gUSE-E",
+  },
+  "BirthCity": "N&G*/H0p",
+  "BirthDate": "b|&",
+  "FirstName": "F",
+  "Gender": "Boy",
+  "Id": "",
+  "LastName": "Gj^3\`l",
+  "MiddleName": "ref",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 38`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 9,
+    "Number": "225",
+    "Street": "O",
+  },
+  "BirthCity": "",
+  "BirthDate": "}(<p",
+  "FirstName": "52w",
+  "Gender": "Girl",
+  "Id": "yevo",
+  "LastName": "!zo<_D<!",
+  "MiddleName": "p",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 39`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 238,
+    "Number": "128",
+    "Street": "&$1\`f#",
+  },
+  "BirthCity": "k/$UAQ#>",
+  "BirthDate": "G$A;lS~+_S",
+  "FirstName": "A'?",
+  "Gender": "Girl",
+  "Id": "T!+[$",
+  "LastName": ""]yJ,#~^$",
+  "MiddleName": "",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 40`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 525,
+    "Number": "172",
+    "Street": "7|?deQ/",
+  },
+  "BirthCity": "b= ",
+  "BirthDate": "SS&Xqp[",
+  "FirstName": "h]",
+  "Gender": "Girl",
+  "Id": "0ZOezTktG7",
+  "LastName": "$y",
+  "MiddleName": "<o?",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 41`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 104,
+    "Number": "726",
+    "Street": "tx",
+  },
+  "BirthCity": "{EUso",
+  "BirthDate": "I$#?#cU:",
+  "FirstName": "R<",
+  "Gender": "Girl",
+  "Id": "=1CX(",
+  "LastName": "Y",
+  "MiddleName": "1( ",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 42`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 82,
+    "Number": "8",
+    "Street": "&#"8O"",
+  },
+  "BirthCity": "v$haFD>=",
+  "BirthDate": "h",
+  "FirstName": "c&} PEP",
+  "Gender": "Girl",
+  "Id": ";BxK ]z",
+  "LastName": "%mL",
+  "MiddleName": "[",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 43`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 61,
+    "Number": "468",
+    "Street": "L",
+  },
+  "BirthCity": "9D*I_)m",
+  "BirthDate": "=^T7m",
+  "FirstName": "RhQgi?G&ea",
+  "Gender": "Girl",
+  "Id": "",
+  "LastName": "&_Sm%E}+I",
+  "MiddleName": "l:5!vDC8",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 44`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 58,
+    "Number": "8",
+    "Street": "s}DQ|",
+  },
+  "BirthCity": "L|LL1.>7r",
+  "BirthDate": "teB/aX>i",
+  "FirstName": ".zH",
+  "Gender": "Boy",
+  "Id": "\`m"",
+  "LastName": "^$J  ",
+  "MiddleName": "v2a",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 45`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 539,
+    "Number": "705",
+    "Street": "",
+  },
+  "BirthCity": "",
+  "BirthDate": "#h7",
+  "FirstName": "ke2Y&",
+  "Gender": "Boy",
+  "Id": "u",
+  "LastName": "toString",
+  "MiddleName": "q,U$f~/b",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 46`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 991,
+    "Number": "993",
+    "Street": "fUPx"{w",
+  },
+  "BirthCity": "=",
+  "BirthDate": "~yr",
+  "FirstName": "9I,%\`j?",
+  "Gender": "Girl",
+  "Id": ":TSN{T8y",
+  "LastName": "|=xlRsy",
+  "MiddleName": "<U!|+Xv9",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 47`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 233,
+    "Number": "200",
+    "Street": "GNokRql|",
+  },
+  "BirthCity": "E{Cl~6?#^|",
+  "BirthDate": "}]",
+  "FirstName": "$",
+  "Gender": "Boy",
+  "Id": "+""+F[ 1",
+  "LastName": "Pj(k18v$",
+  "MiddleName": "Q|",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 48`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 756,
+    "Number": "650",
+    "Street": ":p!%p",
+  },
+  "BirthCity": "p$";",
+  "BirthDate": "1Q",
+  "FirstName": "}\`Bg|u",
+  "Gender": "Boy",
+  "Id": "",
+  "LastName": ""rVJ&",
+  "MiddleName": "'Ku",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 49`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 767,
+    "Number": "998",
+    "Street": "&Yv<",
+  },
+  "BirthCity": "4ZPe0",
+  "BirthDate": "Wy!"ig(zw<",
+  "FirstName": ":ny\`2T",
+  "Gender": "Boy",
+  "Id": "",
+  "LastName": "PW2%gyw",
+  "MiddleName": "",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 50`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 5,
+    "Number": "997",
+    "Street": "qb*F",
+  },
+  "BirthCity": "=X29@b3",
+  "BirthDate": "\\B=:A|",
+  "FirstName": "~D+"[66}H",
+  "Gender": "Boy",
+  "Id": "0?vz^",
+  "LastName": "",
+  "MiddleName": "~k?Z{}fef!",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 51`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 61,
+    "Number": "997",
+    "Street": "~07}A.l",
+  },
+  "BirthCity": "7Vy3O%j_{{",
+  "BirthDate": "JsKJ",
+  "FirstName": "d|jqSzo",
+  "Gender": "Girl",
+  "Id": "1+",
+  "LastName": "nKb<p4w3X",
+  "MiddleName": "{",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 52`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 844,
+    "Number": "5",
+    "Street": "Cf)|",
+  },
+  "BirthCity": ":"vLTyh}J",
+  "BirthDate": "* ",
+  "FirstName": "",
+  "Gender": "Girl",
+  "Id": "",
+  "LastName": ",q9/T",
+  "MiddleName": "#Tvt",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 53`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 156,
+    "Number": "948",
+    "Street": "9'=9#"9",
+  },
+  "BirthCity": "",
+  "BirthDate": "WT'",
+  "FirstName": "",
+  "Gender": "Boy",
+  "Id": "length"Y#_",
+  "LastName": "S"xDDH}O",
+  "MiddleName": "!O]I)R"Lf",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 54`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 54,
+    "Number": "328",
+    "Street": "b",
+  },
+  "BirthCity": "7|PV",
+  "BirthDate": "Sm8",
+  "FirstName": "aU",
+  "Gender": "Boy",
+  "Id": "IU]w.[+^",
+  "LastName": "m\\Y",
+  "MiddleName": "call",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 55`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 937,
+    "Number": "263",
+    "Street": "g",
+  },
+  "BirthCity": "__",
+  "BirthDate": "qu",
+  "FirstName": "ca",
+  "Gender": "Boy",
+  "Id": "KF=",
+  "LastName": "O/Le^xIm@",
+  "MiddleName": "J]U^jYO@",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 56`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 1,
+    "Number": "981",
+    "Street": "P26r",
+  },
+  "BirthCity": "q",
+  "BirthDate": "@N>z%",
+  "FirstName": "$&&}o=!h ",
+  "Gender": "Girl",
+  "Id": ".&protot",
+  "LastName": "Z*I2~V}5",
+  "MiddleName": "S0}w3b|K0",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 57`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 4,
+    "Number": "760",
+    "Street": "k N9*<\`",
+  },
+  "BirthCity": "q>c<",
+  "BirthDate": "",
+  "FirstName": "]ma\`protot",
+  "Gender": "Girl",
+  "Id": "i;$:I",
+  "LastName": "%",
+  "MiddleName": "W&4l- ",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 58`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 994,
+    "Number": "586",
+    "Street": "JxXy",
+  },
+  "BirthCity": "",
+  "BirthDate": "S=}fa,u_E'",
+  "FirstName": "",
+  "Gender": "Girl",
+  "Id": "",
+  "LastName": "+q",
+  "MiddleName": "&@r$|e]!'l",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 59`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 610,
+    "Number": "689",
+    "Street": "",
+  },
+  "BirthCity": "ep9|y?]TzC",
+  "BirthDate": "LI>S Q",
+  "FirstName": "*cy!y}|DG!",
+  "Gender": "Boy",
+  "Id": "DMw",
+  "LastName": "r1#{",
+  "MiddleName": "OjgZ",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 60`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 10,
+    "Number": "995",
+    "Street": "yc}6s9E",
+  },
+  "BirthCity": "$MLv",
+  "BirthDate": "l9",
+  "FirstName": "wPzKZ1K-tE",
+  "Gender": "Girl",
+  "Id": "'GLH}vZ*",
+  "LastName": "bbz$k*w",
+  "MiddleName": "Sfp",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 61`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 615,
+    "Number": "993",
+    "Street": ":myB,:",
+  },
+  "BirthCity": "x",
+  "BirthDate": "Lr",
+  "FirstName": "W#Cb",
+  "Gender": "Boy",
+  "Id": "h1\`]p",
+  "LastName": "SeY#)I+IGP",
+  "MiddleName": "",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 62`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 416,
+    "Number": "971",
+    "Street": "8f>!gii",
+  },
+  "BirthCity": "__l",
+  "BirthDate": ">g5",
+  "FirstName": "m(K>x]XV",
+  "Gender": "Girl",
+  "Id": "",
+  "LastName": "y \\~k '",
+  "MiddleName": "%zx.ElqP",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 63`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 997,
+    "Number": "5",
+    "Street": "DV{m",
+  },
+  "BirthCity": "V *wVF",
+  "BirthDate": "ni,LV",
+  "FirstName": "(",
+  "Gender": "Boy",
+  "Id": "SqY>e",
+  "LastName": " $\`$$",
+  "MiddleName": "@r",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 64`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 561,
+    "Number": "731",
+    "Street": "gyjV|",
+  },
+  "BirthCity": "(rr-VB*p",
+  "BirthDate": "toString",
+  "FirstName": "[",
+  "Gender": "Boy",
+  "Id": "L61h",
+  "LastName": "Fo~.mj",
+  "MiddleName": "ref",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 65`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 33,
+    "Number": "166",
+    "Street": "jg8*'b!o5_",
+  },
+  "BirthCity": "!x",
+  "BirthDate": "",
+  "FirstName": "6&KQD&",
+  "Gender": "Girl",
+  "Id": "[7H@-L+!?9",
+  "LastName": "wf29k;>,)",
+  "MiddleName": "%",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 66`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 933,
+    "Number": "996",
+    "Street": "caller",
+  },
+  "BirthCity": "*&",
+  "BirthDate": ";f9c-~8Sp",
+  "FirstName": "sL",
+  "Gender": "Boy",
+  "Id": """,
+  "LastName": "z+!&r_8#~_",
+  "MiddleName": "}jiNa#Ax",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 67`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 190,
+    "Number": "3",
+    "Street": "R>-gLGqIjM",
+  },
+  "BirthCity": "W",
+  "BirthDate": "ND",
+  "FirstName": "7x0wyp).?",
+  "Gender": "Boy",
+  "Id": "$#",
+  "LastName": "ke",
+  "MiddleName": ".G\`I]U",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 68`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 6,
+    "Number": "878",
+    "Street": "Jjg",
+  },
+  "BirthCity": "",
+  "BirthDate": "D{$h",
+  "FirstName": "bf,0L",
+  "Gender": "Boy",
+  "Id": "Xc9zAb",
+  "LastName": "E",
+  "MiddleName": "{7",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 69`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 990,
+    "Number": "2",
+    "Street": "1nS]",
+  },
+  "BirthCity": "",
+  "BirthDate": "r# etter_",
+  "FirstName": "{.",
+  "Gender": "Girl",
+  "Id": "H{9u,(xz6",
+  "LastName": "xu4_57S",
+  "MiddleName": "ap",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 70`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 329,
+    "Number": "956",
+    "Street": "y=",
+  },
+  "BirthCity": "!!ZV",
+  "BirthDate": "qni^=Vu/I",
+  "FirstName": ";7zj",
+  "Gender": "Girl",
+  "Id": "Y%",
+  "LastName": "V>",
+  "MiddleName": ">uvuW:*PD",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 71`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 187,
+    "Number": "360",
+    "Street": "~",
+  },
+  "BirthCity": "name!appl",
+  "BirthDate": "Ke#H",
+  "FirstName": "",
+  "Gender": "Boy",
+  "Id": "P?-*P",
+  "LastName": "xc",
+  "MiddleName": "^%",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 72`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 108,
+    "Number": "605",
+    "Street": "EkV:",
+  },
+  "BirthCity": "2drS{w",
+  "BirthDate": "4",
+  "FirstName": "X:LnGo3",
+  "Gender": "Boy",
+  "Id": "",
+  "LastName": "ref",
+  "MiddleName": "wdMc",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 73`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 429,
+    "Number": "5",
+    "Street": "#%z",
+  },
+  "BirthCity": "P>s",
+  "BirthDate": "QlfYQ,>6n",
+  "FirstName": "$\\",
+  "Gender": "Girl",
+  "Id": "42uB<F"Uu",
+  "LastName": " /!xz#Z}yC",
+  "MiddleName": "p&zx4k6",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 74`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 845,
+    "Number": "9",
+    "Street": "/e9K0-tJ[0",
+  },
+  "BirthCity": "",
+  "BirthDate": "c*.CX8",
+  "FirstName": "vh f",
+  "Gender": "Girl",
+  "Id": "\`4][Aosk",
+  "LastName": "'ro4v",
+  "MiddleName": "Nn##nW|",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 75`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 5,
+    "Number": "6",
+    "Street": "I",
+  },
+  "BirthCity": "<C#!FyX!6I",
+  "BirthDate": ";|)%m!#&",
+  "FirstName": "pX7Zbnp",
+  "Gender": "Girl",
+  "Id": "}Eus",
+  "LastName": "bg\\Gx\\2E;G",
+  "MiddleName": ""!s",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 76`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 4,
+    "Number": "945",
+    "Street": "_3hV|",
+  },
+  "BirthCity": "85_S",
+  "BirthDate": "arguments",
+  "FirstName": "U%",
+  "Gender": "Boy",
+  "Id": "Xk,VR\\",
+  "LastName": "*",
+  "MiddleName": "{!XT-R^E",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 77`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 525,
+    "Number": "527",
+    "Street": "|r",
+  },
+  "BirthCity": "@3B$",
+  "BirthDate": "T",
+  "FirstName": "",
+  "Gender": "Boy",
+  "Id": "?Tix9d5?o",
+  "LastName": "_~H",
+  "MiddleName": "D$n",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 78`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 5,
+    "Number": "990",
+    "Street": ""z$|V6",
+  },
+  "BirthCity": "=0y"k"",
+  "BirthDate": "YZ7~",
+  "FirstName": "8If;|mx5d",
+  "Gender": "Girl",
+  "Id": "{",
+  "LastName": "&$P<;H~"",
+  "MiddleName": "6D",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 79`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 95,
+    "Number": "230",
+    "Street": "Y,1hIPeE",
+  },
+  "BirthCity": "c",
+  "BirthDate": "{}{",
+  "FirstName": "48"S",
+  "Gender": "Girl",
+  "Id": "2$ ^25T",
+  "LastName": "}lnx",
+  "MiddleName": "D?;'OXp@?)",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 80`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 906,
+    "Number": "47",
+    "Street": "fDn9ar",
+  },
+  "BirthCity": "Jqnl",
+  "BirthDate": "[",
+  "FirstName": "",
+  "Gender": "Boy",
+  "Id": "N",
+  "LastName": "QhuT,^B4,\\",
+  "MiddleName": "Uw{$9*E",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 81`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 3,
+    "Number": "249",
+    "Street": "u#",
+  },
+  "BirthCity": "4}.{",
+  "BirthDate": "(jKQc",
+  "FirstName": "",
+  "Gender": "Girl",
+  "Id": "ksP6doO",
+  "LastName": " ",
+  "MiddleName": "qrKg18VE.f",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 82`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 543,
+    "Number": "992",
+    "Street": "",
+  },
+  "BirthCity": "[YV]o^t",
+  "BirthDate": "tVu}FD",
+  "FirstName": "xV7",
+  "Gender": "Boy",
+  "Id": "",
+  "LastName": ";KE%4_9uQ",
+  "MiddleName": "l(o+~ZunL",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 83`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 7,
+    "Number": "6",
+    "Street": "#=S*9gq",
+  },
+  "BirthCity": "}eO zl/",
+  "BirthDate": "bvGq!&:uU",
+  "FirstName": "_?#p32Ry,",
+  "Gender": "Boy",
+  "Id": "RC/Lgl_",
+  "LastName": "%o&*",
+  "MiddleName": "#~",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 84`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 2,
+    "Number": "225",
+    "Street": "we~*Q:ap",
+  },
+  "BirthCity": "il=",
+  "BirthDate": "L",
+  "FirstName": "\\#R@[;",
+  "Gender": "Girl",
+  "Id": ""@",
+  "LastName": "m",
+  "MiddleName": "!(",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 85`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 228,
+    "Number": "515",
+    "Street": "P &",
+  },
+  "BirthCity": "_9&GYz#&",
+  "BirthDate": "C"T&~-P!N:",
+  "FirstName": "",
+  "Gender": "Boy",
+  "Id": "#",
+  "LastName": "EK^",
+  "MiddleName": "n)Ga&/\`",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 86`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 462,
+    "Number": "994",
+    "Street": "sfrbi",
+  },
+  "BirthCity": "H#xnZ1!l",
+  "BirthDate": "Ep-8{",
+  "FirstName": "",
+  "Gender": "Boy",
+  "Id": "VT@",
+  "LastName": "K;:",
+  "MiddleName": "toLocaleSt",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 87`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 10,
+    "Number": "7",
+    "Street": "TA4",
+  },
+  "BirthCity": "jO#b$",
+  "BirthDate": "^E$",
+  "FirstName": "%",
+  "Gender": "Boy",
+  "Id": "jLZ%,"x;",
+  "LastName": "i/En",
+  "MiddleName": "s7K{j",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 88`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 9,
+    "Number": "9",
+    "Street": "QY $'eDdh'",
+  },
+  "BirthCity": "V=BR-",
+  "BirthDate": "+-,",
+  "FirstName": "-x~P^(-b",
+  "Gender": "Girl",
+  "Id": "1>d",
+  "LastName": "iIJiJQmUC3",
+  "MiddleName": "}*%_",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 89`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 1,
+    "Number": "415",
+    "Street": "!(#%7 i",
+  },
+  "BirthCity": "5mw-G5\\?"U",
+  "BirthDate": " (",
+  "FirstName": "BWV",
+  "Gender": "Boy",
+  "Id": "B-# }",
+  "LastName": "AT",
+  "MiddleName": "{",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 90`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 258,
+    "Number": "258",
+    "Street": "#t ckS;H#W",
+  },
+  "BirthCity": "+D2;_!",
+  "BirthDate": "{.",
+  "FirstName": "bind",
+  "Gender": "Boy",
+  "Id": ">KI,",
+  "LastName": "",
+  "MiddleName": "bfL~lQ",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 91`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 624,
+    "Number": "622",
+    "Street": "",
+  },
+  "BirthCity": "w)",
+  "BirthDate": "<Sr<LM7F=T",
+  "FirstName": "u+<4l",
+  "Gender": "Girl",
+  "Id": "",
+  "LastName": "3!mr"",
+  "MiddleName": "C{%{k$",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 92`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 415,
+    "Number": "122",
+    "Street": ".s!:!",
+  },
+  "BirthCity": ";lLWh\\/'%0",
+  "BirthDate": "h",
+  "FirstName": ";w_vz}~",
+  "Gender": "Girl",
+  "Id": "*'6",
+  "LastName": "u/,F({",
+  "MiddleName": "",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 93`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 10,
+    "Number": "384",
+    "Street": "7D",
+  },
+  "BirthCity": "~aJ",
+  "BirthDate": "m@5",
+  "FirstName": "F:TFl~E,>",
+  "Gender": "Girl",
+  "Id": ":1",
+  "LastName": "",
+  "MiddleName": "RtE9=/]A",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 94`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 990,
+    "Number": "8",
+    "Street": "",
+  },
+  "BirthCity": "..|([#",
+  "BirthDate": "6\\e"thMF",
+  "FirstName": "@(yuzN",
+  "Gender": "Boy",
+  "Id": ""( qY]}",
+  "LastName": "?",
+  "MiddleName": "keyt#nam",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 95`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 920,
+    "Number": "555",
+    "Street": ">eCUV&(A",
+  },
+  "BirthCity": "WKw"",
+  "BirthDate": "B=S",
+  "FirstName": "htMaq",
+  "Gender": "Boy",
+  "Id": "W\${@WW@",
+  "LastName": "",
+  "MiddleName": "15:8_y)",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 96`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 996,
+    "Number": "8",
+    "Street": "1",
+  },
+  "BirthCity": "<",
+  "BirthDate": "re{calle",
+  "FirstName": "bTC$G",
+  "Gender": "Boy",
+  "Id": "bindref",
+  "LastName": "LyX",
+  "MiddleName": "H{~",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 97`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 877,
+    "Number": "564",
+    "Street": "|#uy>~}h",
+  },
+  "BirthCity": "",
+  "BirthDate": "F-",
+  "FirstName": "F3[\`F8B>",
+  "Gender": "Boy",
+  "Id": "jx/",
+  "LastName": "+"+qAz",
+  "MiddleName": "J",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 98`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 10,
+    "Number": "999",
+    "Street": "O'kWDB0tcQ",
+  },
+  "BirthCity": "~~|7#m,5#4",
+  "BirthDate": "cG",
+  "FirstName": "key",
+  "Gender": "Boy",
+  "Id": "Aref",
+  "LastName": "U",
+  "MiddleName": "i%o}|"1!",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 99`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 59,
+    "Number": "849",
+    "Street": "R",
+  },
+  "BirthCity": "",
+  "BirthDate": "\`^d|",
+  "FirstName": "+?Y|9u-",
+  "Gender": "Girl",
+  "Id": "\`",
+  "LastName": "Az_",
+  "MiddleName": "^%6%b#",
+}
+`;
+
+exports[`ChildMapper should map X5T78 to Child (Girl): aleatory Children 100`] = `
+Child {
+  "Address": Address {
+    "City": "Paradise",
+    "CountryId": 835,
+    "Number": "653",
+    "Street": "%.\\?Fo%e1",
+  },
+  "BirthCity": "iie%g>",
+  "BirthDate": "%cNDp",
+  "FirstName": "%x",
+  "Gender": "Boy",
+  "Id": "4",
+  "LastName": "rz?",
+  "MiddleName": "IW9?qVz=\`",
+}
+`;
