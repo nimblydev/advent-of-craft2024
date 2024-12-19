@@ -1,7 +1,7 @@
 import { Elf } from "./elf";
 
 export class TaskAssignmentSystem {
-  private elves: Elf[] = [];
+  private readonly elves: Elf[] = [];
   private tasksCompleted: number = 0;
 
   constructor(elves: Elf[]) {
