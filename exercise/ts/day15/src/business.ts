@@ -1,27 +1,50 @@
-import {Child, Gift, Sleigh} from './models';
-import {Factory, Inventory, WishList} from "./dependencies";
+import { Child, Gift, LogList, Sleigh } from "./models";
+import {
+  Factory,
+  GiftMissplacedError,
+  Inventory,
+  NotManufacturedError,
+  NotSoNiceChildError,
+  WishList,
+} from "./dependencies";
+import { Effect, pipe } from "effect";
 
 export class Business {
-    constructor(
-        private factory: Factory,
-        private inventory: Inventory,
-        private wishList: WishList
-    ) {}
+  constructor(
+    private readonly factory: Factory,
+    private readonly inventory: Inventory,
+    private readonly wishList: WishList
+  ) {}
 
-    loadGiftsInSleigh(...children: Child[]): Sleigh {
-        const sleigh = new Sleigh();
-        children.forEach((child) => {
-            const gift = this.wishList.identifyGift(child);
-            if (gift) {
-                const manufacturedGift = this.factory.findManufacturedGift(gift);
-                if (manufacturedGift) {
-                    const finalGift = this.inventory.pickUpGift(manufacturedGift.barCode);
-                    if (finalGift) {
-                        sleigh.set(child, `Gift: ${finalGift.name} has been loaded!`);
-                    }
-                }
-            }
-        });
-        return sleigh;
-    }
+  loadGiftsInSleigh(...children: Child[]): Sleigh {
+    const sleigh = new Sleigh();
+
+    children.forEach((child) => {
+      const setSleigh = (gift: Gift) =>
+        sleigh.set(child, `Gift: ${gift.name} has been loaded!`);
+
+      const setSleighError = (
+        error: GiftMissplacedError | NotManufacturedError | NotSoNiceChildError
+      ) => sleigh.set(child, `${error.message}`);
+
+      const program = pipe(
+        child,
+        (child) => this.wishList.identifyGift(child),
+        Effect.flatMap((gift) => this.factory.findManufacturedGift(gift)),
+        Effect.flatMap((manufacturedGift) =>
+          this.inventory.pickUpGift(manufacturedGift.barCode)
+        ),
+        Effect.map((gift) => setSleigh(gift)),
+
+        Effect.catchTags({
+          NotManufacturedError: (e) => Effect.succeed(setSleighError(e)),
+          GiftMissplacedError: (e) => Effect.succeed(setSleighError(e)),
+          NotSoNiceChildError: (e) => Effect.succeed(setSleighError(e)),
+        })
+      );
+
+      Effect.runPromise(program);
+    });
+    return sleigh;
+  }
 }
