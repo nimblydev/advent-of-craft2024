@@ -1,9 +1,15 @@
 import { Child, Gift, LogList, Sleigh } from "./models";
-import { Factory, Inventory, WishList } from "./dependencies";
-import { Console, Effect, pipe } from "effect";
+import {
+  Factory,
+  GiftMissplacedError,
+  Inventory,
+  NotManufacturedError,
+  NotSoNiceChildError,
+  WishList,
+} from "./dependencies";
+import { Effect, pipe } from "effect";
 
 export class Business {
-  readonly logList: LogList = new LogList();
   constructor(
     private readonly factory: Factory,
     private readonly inventory: Inventory,
@@ -17,6 +23,10 @@ export class Business {
       const setSleigh = (gift: Gift) =>
         sleigh.set(child, `Gift: ${gift.name} has been loaded!`);
 
+      const setSleighError = (
+        error: GiftMissplacedError | NotManufacturedError | NotSoNiceChildError
+      ) => sleigh.set(child, `${error.message}`);
+
       const program = pipe(
         child,
         (child) => this.wishList.identifyGift(child),
@@ -27,12 +37,9 @@ export class Business {
         Effect.map((gift) => setSleigh(gift)),
 
         Effect.catchTags({
-          NotManufacturedError: (e) =>
-            Effect.succeed(this.logList.push(e.message)),
-          GiftMissplacedError: (e) =>
-            Effect.succeed(this.logList.push(e.message)),
-          NotSoNiceChildError: (e) =>
-            Effect.succeed(this.logList.push(e.message)),
+          NotManufacturedError: (e) => Effect.succeed(setSleighError(e)),
+          GiftMissplacedError: (e) => Effect.succeed(setSleighError(e)),
+          NotSoNiceChildError: (e) => Effect.succeed(setSleighError(e)),
         })
       );
 

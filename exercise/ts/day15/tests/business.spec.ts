@@ -35,10 +35,7 @@ describe("Business Logic", () => {
     const business = new Business(factory, inventory, wishList);
     const sleigh = business.loadGiftsInSleigh(john);
 
-    expect(sleigh.has(john)).toBe(false);
-    expect(business.logList).toContain(
-      "Missing gift: John wasn't nice this year!"
-    );
+    expect(sleigh.get(john)).toBe("Missing gift: John wasn't nice this year!");
   });
 
   test("Gift should not be loaded if the toy was not manufactured", () => {
@@ -47,8 +44,7 @@ describe("Business Logic", () => {
     const business = new Business(factory, inventory, wishList);
     const sleigh = business.loadGiftsInSleigh(john);
 
-    expect(sleigh.has(john)).toBe(false);
-    expect(business.logList).toContain(
+    expect(sleigh.get(john)).toBe(
       "Missing manufactured gift: Gift wasn't manufactured!"
     );
   });
@@ -60,8 +56,7 @@ describe("Business Logic", () => {
     const business = new Business(factory, inventory, wishList);
     const sleigh = business.loadGiftsInSleigh(john);
 
-    expect(sleigh.has(john)).toBe(false);
-    expect(business.logList).toContain(
+    expect(sleigh.get(john)).toBe(
       "Missing gift: The gift has probably been misplaced by the elves!"
     );
   });

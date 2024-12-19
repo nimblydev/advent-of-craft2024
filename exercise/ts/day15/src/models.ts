@@ -11,5 +11,3 @@ export class Child {
 }
 
 export class Sleigh extends Map<Child, string> {}
-
-export class LogList extends Array<string> {}
