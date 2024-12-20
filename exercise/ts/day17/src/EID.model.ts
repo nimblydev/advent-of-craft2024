@@ -66,7 +66,7 @@ export class EID {
     if (!match) return Left(new Error("Invalid EID format"));
 
     const [gender, year, serial, controlKey] = EID.parseMatchDetails(match);
-    
+
     return ElfGender.parse(gender)
       .chain((gender) => YearDate.parse(year).map((year) => ({ gender, year })))
       .chain(({ gender, year }) =>
@@ -80,15 +80,11 @@ export class EID {
   };
 
   private static readonly parseMatchDetails = (match): Array<number> => {
-    const [_, genderString, yearString, serialString, controlKeyString] =
-      match;
+    const [_, genderString, yearString, serialString, controlKeyString] = match;
 
-    return  [
-      genderString,
-      yearString,
-      serialString,
-      controlKeyString,
-    ].map((stringValue) => parseInt(stringValue, 10)));
+    return [genderString, yearString, serialString, controlKeyString].map(
+      (stringValue) => parseInt(stringValue, 10)
+    );
   };
 
   private static readonly extractPrefix = (maybeEID) =>
