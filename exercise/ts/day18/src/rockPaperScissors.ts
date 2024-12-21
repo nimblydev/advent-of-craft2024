@@ -10,66 +10,52 @@ export type Result = {
   reason: string;
 };
 
-export const defaultRules = new OutcomeHandler(
-  new Map([
-    [
-      Choice.Rock,
-      new WinningOutcome(
-        new LosingChoiceList(
-          new Map([
-            [Choice.Scissors, new Reason("crushes")],
-            [Choice.Lizard, new Reason("crushes")],
-          ])
-        )
-      ),
-    ],
-    [
-      Choice.Paper,
-      new WinningOutcome(
-        new LosingChoiceList(
-          new Map([
-            [Choice.Rock, new Reason("covers")],
-            [Choice.Spock, new Reason("disproves")],
-          ])
-        )
-      ),
-    ],
-    [
-      Choice.Scissors,
-      new WinningOutcome(
-        new LosingChoiceList(
-          new Map([
-            [Choice.Paper, new Reason("cuts")],
-            [Choice.Lizard, new Reason("decapitates")],
-          ])
-        )
-      ),
-    ],
+export const conf = {
+  Rock: {
+    Scissors: "crushes",
+    Lizard: "crushes",
+  },
+  Paper: {
+    Rock: "covers",
+    Spock: "disproves",
+  },
+  Scissors: {
+    Paper: "cuts",
+    Lizard: "decapitates",
+  },
+  Spock: {
+    Rock: "vaporizes",
+    Scissors: "smashes",
+  },
+  Lizard: {
+    Paper: "eats",
+    Spock: "poisons",
+  },
+} as const;
 
-    [
-      Choice.Spock,
-      new WinningOutcome(
-        new LosingChoiceList(
-          new Map([
-            [Choice.Rock, new Reason("vaporizes")],
-            [Choice.Scissors, new Reason("smashes")],
-          ])
-        )
-      ),
-    ],
-    [
-      Choice.Lizard,
-      new WinningOutcome(
-        new LosingChoiceList(
-          new Map([
-            [Choice.Paper, new Reason("eats")],
-            [Choice.Spock, new Reason("poisons")],
-          ])
-        )
-      ),
-    ],
-  ])
-);
+export const buildOutcomeHandler = (
+  conf: Record<string, Record<string, string>>
+): OutcomeHandler => {
+  return new OutcomeHandler(
+    new Map(
+      Object.entries(conf).map(([winner, looserMap]) => [
+        Choice[winner],
+        new WinningOutcome(
+          new LosingChoiceList(
+            new Map(
+              Object.entries(looserMap).map(([looser, reason]) => [
+                Choice[looser],
+                new Reason(reason),
+              ])
+            )
+          )
+        ),
+      ])
+    )
+  );
+};
+
+export const defaultRules = buildOutcomeHandler(conf);
 
 export class RockPaperScissors {
   private readonly _rules: OutcomeHandler;
