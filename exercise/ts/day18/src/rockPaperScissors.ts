@@ -1,58 +1,12 @@
 import { Choice, EmojiChoice } from "./domain/Choice";
 import { OutcomeHandler } from "./domain/GameRules";
-import { LosingChoiceList } from "./domain/LosingChoiceList";
-import { WinningOutcome } from "./domain/WinningOutcome";
-import { Reason } from "./domain/Reason";
+import { buildOutcomeHandler } from "./buildOutcomeHandler";
+import { conf } from "./settings/conf";
 
 export type Winner = "Player 1" | "Player 2" | "Draw";
 export type Result = {
   winner: Winner;
   reason: string;
-};
-
-export const conf = {
-  Rock: {
-    Scissors: "crushes",
-    Lizard: "crushes",
-  },
-  Paper: {
-    Rock: "covers",
-    Spock: "disproves",
-  },
-  Scissors: {
-    Paper: "cuts",
-    Lizard: "decapitates",
-  },
-  Spock: {
-    Rock: "vaporizes",
-    Scissors: "smashes",
-  },
-  Lizard: {
-    Paper: "eats",
-    Spock: "poisons",
-  },
-} as const;
-
-export const buildOutcomeHandler = (
-  conf: Record<string, Record<string, string>>
-): OutcomeHandler => {
-  return new OutcomeHandler(
-    new Map(
-      Object.entries(conf).map(([winner, looserMap]) => [
-        Choice[winner],
-        new WinningOutcome(
-          new LosingChoiceList(
-            new Map(
-              Object.entries(looserMap).map(([looser, reason]) => [
-                Choice[looser],
-                new Reason(reason),
-              ])
-            )
-          )
-        ),
-      ])
-    )
-  );
 };
 
 export const defaultRules = buildOutcomeHandler(conf);
