@@ -80,13 +80,20 @@ const randomCharacterAppenderMutator: Mutator = new Mutator(
 const randomOneCharacterMutator: Mutator = new Mutator(
   "Mutator that change one character to a random one",
   (eid: EID) => {
-    return fc.integer({ min: 0, max: 7 }).map((x) => {
-      return (
-        eid.toString().substring(0, x) +
-        eid.toString().substring(0, 1) +
-        (1 % 10) +
-        eid.toString().substring(x + 1)
-      );
+    return fc.integer({ min: 0, max: 7 }).chain((charIndex) => {
+      const originalCharacter = parseInt(eid.toString().charAt(charIndex));
+      return fc
+        .array(fc.integer({ min: 0, max: 9 }))
+        .chain((numberCandidate) => {
+          const replacementCharacter = numberCandidate.find(
+            (x) => x !== originalCharacter
+          );
+          return fc.constant(
+            eid.toString().substring(0, charIndex) +
+              replacementCharacter +
+              eid.toString().substring(charIndex + 1)
+          );
+        });
     });
   }
 );
