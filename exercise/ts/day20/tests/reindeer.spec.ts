@@ -96,6 +96,15 @@ describe("Reindeer API", () => {
   });
 
   describe("when useing a invalid API key", () => {
+    it("should return the health status", async () => {
+      const response = await fetch(`${baseUrl}/health`, {
+        headers: { "X-API-Key": "invalid  api key" },
+      });
+      const responseBody = await response.json();
+      expect(responseBody).toMatchSnapshot("health");
+      expect(response.status).toBe(200);
+    });
+
     it("should return forbidden when trying to get a reindeer", async () => {
       const response = await fetch(
         `${baseUrl}/reindeer/40f9d24d-d3e0-4596-adc5-b4936ff84b19`,

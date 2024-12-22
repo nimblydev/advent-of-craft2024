@@ -1,9 +1,13 @@
-import { Either } from "fp-ts/lib/Either";
+import { Either, right } from "fp-ts/lib/Either";
 import { Reindeer, ReindeerColor, ReindeerErrorCode } from "./types";
 import { ReindeerRepository } from "./ReindeerRepository";
 
 export class ReindeerService {
   constructor(private readonly reindeerRepository: ReindeerRepository) {}
+
+  public health(): Either<never, string> {
+    return right("OK");
+  }
 
   public get(id: string): Either<ReindeerErrorCode, Reindeer> {
     return this.reindeerRepository.get(id);

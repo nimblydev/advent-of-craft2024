@@ -1,8 +1,8 @@
 import { Either, left, right } from "fp-ts/lib/Either";
-import { ReindeerToCreate } from "../../src/service";
-import { Reindeer, ReindeerColor, ReindeerErrorCode } from "../../src/types";
+import { ReindeerToCreate } from "../service";
+import { Reindeer, ReindeerColor, ReindeerErrorCode } from "../types";
 import { v5 as uuidv5 } from "uuid";
-import { ReindeerRepository } from "../../src/ReindeerRepository";
+import { ReindeerRepository } from "../ReindeerRepository";
 import { createHash } from "crypto";
 
 const NAMESPACE = "6ba7b810-9dad-11d1-80b4-00c04fd430c8"; // Example namespace UUID

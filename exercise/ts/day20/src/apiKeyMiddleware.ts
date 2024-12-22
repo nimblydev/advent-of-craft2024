@@ -4,6 +4,7 @@ export const apiKeyMiddleware =
   (validApiKey: string) =>
   (req: Request, res: Response, next: NextFunction) => {
     const apiKey = req.headers["x-api-key"];
+
     if (apiKey && apiKey === validApiKey) {
       next();
     } else {
