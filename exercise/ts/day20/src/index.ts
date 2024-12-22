@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import { ReindeerService, ReindeerToCreate } from "./service";
 import { fold } from "fp-ts/Either";
 import { Reindeer, ReindeerErrorCode } from "./types";
-import { apiKeyMiddleware as checkApiKeyMiddleware } from "./apiKeyMiddleware";
+import { apiKeyMiddleware } from "./apiKeyMiddleware";
 import { InMemoryReinderRepository } from "./fakes/InMemoryReinderRepository";
 import { apiVersionHeaderMiddleware } from "./apiVersionHeader";
 
@@ -15,8 +15,8 @@ app.use(express.json());
 const reindeerService = new ReindeerService(new InMemoryReinderRepository());
 
 app.use(apiVersionHeaderMiddleware(API_VERSION));
-// app.use(checkApiKeyMiddleware(API_KEY));
 
+const checkApiKeyMiddleware = apiKeyMiddleware(API_KEY);
 app.get("/health", (req: Request, res: Response) => {
   const result = reindeerService.health();
   fold<never, string, unknown>(
