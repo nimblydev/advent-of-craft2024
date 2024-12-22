@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reindeer API when useing a invalid API key should return the health status: health 1`] = `
+{
+  "apiVersion": "1.0",
+  "status": "OK",
+}
+`;
+
+exports[`Reindeer API when using a valid API key should create a reindeer: create-reindeer 1`] = `
+{
+  "color": 2,
+  "id": "19958282-a3b9-5726-b232-db61d5395e22",
+  "name": "Rudolph",
+}
+`;
+
+exports[`Reindeer API when using a valid API key should get a reindeer: get-reindeer 1`] = `
+{
+  "color": 2,
+  "id": "40f9d24d-d3e0-4596-adc5-b4936ff84b19",
+  "name": "Petar",
+}
+`;
+
+exports[`Reindeer API when using a valid API key should return an x-api-version header: api-version 1`] = `"1.0"`;
