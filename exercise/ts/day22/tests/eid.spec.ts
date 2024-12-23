@@ -6,6 +6,8 @@ import { SerialNumber } from "../src/eid/serialNumber";
 import { EID } from "../src/eid/eid";
 import { isLeft, isRight } from "fp-ts/Either";
 
+fc.configureGlobal({ numRuns: 2000 });
+
 const yearGenerator = fc
   .integer()
   .filter((x) => x >= 0 && x <= 99)
