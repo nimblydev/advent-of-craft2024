@@ -33,14 +33,19 @@ export class ControlSystem {
     reindeers: readonly Reindeer[]
   ): ReindeerPowerUnit[] {
     return [...reindeers]
-      .sort((a, b) => a.getMagicPower() - b.getMagicPower())
+      .filter((reindeer) => !reindeer.needsRest())
+      .sort(this.sortByMagicPowerDescending())
       .map((reindeer) => this.attachPowerUnit(reindeer));
+  }
+
+  private sortByMagicPowerDescending(): (a: Reindeer, b: Reindeer) => number {
+    return (a, b) => b.getMagicPower() - a.getMagicPower();
   }
 
   public attachPowerUnit(reindeer: Reindeer): ReindeerPowerUnit {
     return new ReindeerPowerUnit(
       reindeer,
-      new MagicPowerAmplifier(AmplifierType.BLESSED)
+      this.magicStable.getTheBestMagicPowerAmplifier()
     );
   }
 

@@ -22,4 +22,21 @@ export class EnhancedMagicStable extends MagicStable {
   get magicPowerAmplifiersStock(): Array<MagicPowerAmplifier> {
     return this._magicPowerAmplifierStock;
   }
+
+  getTheBestMagicPowerAmplifier(): MagicPowerAmplifier {
+    if (this.magicPowerAmplifiersStock.length === 0) {
+      return new MagicPowerAmplifier(AmplifierType.BASIC);
+    }
+    return this.magicPowerAmplifiersStock
+      .sort(this.descendingOrderAmplifierType)
+      .pop();
+  }
+
+  private descendingOrderAmplifierType(
+    a: MagicPowerAmplifier,
+    b: MagicPowerAmplifier
+  ): number {
+    if (a.equals(b)) return 0;
+    return a.isBetterThan(b) ? 1 : -1;
+  }
 }
