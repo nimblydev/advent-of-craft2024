@@ -4,12 +4,11 @@ import { AmplifierType } from "./amplifierType";
 
 export class ReindeerPowerUnit {
   public reindeer: Reindeer;
-  public amplifier: MagicPowerAmplifier = new MagicPowerAmplifier(
-    AmplifierType.BLESSED
-  );
+  public amplifier: MagicPowerAmplifier;
 
-  constructor(reindeer: Reindeer) {
+  constructor(reindeer: Reindeer, amplifier?: MagicPowerAmplifier) {
     this.reindeer = reindeer;
+    this.amplifier = amplifier || new MagicPowerAmplifier(AmplifierType.BASIC);
   }
 
   public harnessMagicPower(): number {
