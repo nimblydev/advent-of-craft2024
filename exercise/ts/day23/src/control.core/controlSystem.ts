@@ -1,5 +1,4 @@
 import { Dashboard } from "./dashboard";
-import { MagicStable } from "../external/stable/magicStable";
 import { ReindeerPowerUnit } from "./reindeerPowerUnit";
 import { SleighAction, SleighEngineStatus } from "./enums";
 import { Reindeer } from "../external/deer/reindeer";
@@ -7,8 +6,7 @@ import {
   ReindeersNeedRestException,
   SleighNotStartedException,
 } from "./exceptions";
-import { MagicPowerAmplifier } from "./magicPowerAmplifier";
-import { AmplifierType } from "./amplifierType";
+
 import { EnhancedMagicStable } from "./enhancedMagicStable";
 
 export class ControlSystem {
