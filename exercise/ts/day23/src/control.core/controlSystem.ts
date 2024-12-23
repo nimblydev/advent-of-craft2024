@@ -9,12 +9,13 @@ import {
 } from "./exceptions";
 import { MagicPowerAmplifier } from "./magicPowerAmplifier";
 import { AmplifierType } from "./amplifierType";
+import { EnhancedMagicStable } from "./enhancedMagicStable";
 
 export class ControlSystem {
-  private XmasSpirit = 40;
-  private dashboard: Dashboard;
-  private magicStable = new MagicStable();
-  private reindeerPowerUnits: ReindeerPowerUnit[];
+  private readonly XmasSpirit = 40;
+  private readonly dashboard: Dashboard;
+  private readonly magicStable = new EnhancedMagicStable();
+  private readonly reindeerPowerUnits: ReindeerPowerUnit[];
   public status: SleighEngineStatus;
   public action: SleighAction;
   private controlMagicPower = 0;
