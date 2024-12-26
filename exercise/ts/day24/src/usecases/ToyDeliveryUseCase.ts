@@ -9,7 +9,7 @@ import { DomainError } from "../domain/core/DomainError";
 import { IToyRepository } from "../domain/IToyRepository";
 
 export class TDUC {
-  constructor(private repository: IToyRepository) {}
+  constructor(public repository: IToyRepository) {}
 
   do(deliverToy: DeliverToy): Either<DomainError, Unit> {
     const findAToy = this.repository.fBn(deliverToy.desiredToy);
