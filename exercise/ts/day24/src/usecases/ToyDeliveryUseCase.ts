@@ -42,7 +42,8 @@ export class TDUC {
 
   private errorFor(deliverToy: DeliverToy): DomainError {
     return DomainError.anError(
-      `Oops we have a problem... we have not built the toy: ${deliverToy.desiredToy.toString()}`
+      "Oops we have a problem... we have not built the toy: " +
+        deliverToy.desiredToy.toString()
     );
   }
 }
