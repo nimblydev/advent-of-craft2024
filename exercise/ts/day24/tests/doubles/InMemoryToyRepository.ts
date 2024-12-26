@@ -9,11 +9,11 @@ export class InMemoryToyRepository implements IToyRepository {
   private _raisedEvents: IEvent[] = [];
 
   findByName(name: string): Option<Toy> {
-    let toyIndexFound = this._toys.has(name) ? name : -1;
-    if (toyIndexFound !== -1) {
-      return some(this._toys.get(name));
+    for (let toy of this._toys.values()) {
+      if (toy.name === name) {
+        return some(toy);
+      }
     }
-
     return none;
   }
 
