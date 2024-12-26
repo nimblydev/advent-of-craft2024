@@ -1,14 +1,14 @@
 import { none, Option, some } from "fp-ts/Option";
 import { IToyRepository } from "../../src/domain/IToyRepository";
-import { Toy } from "../../src/domain/Toy";
+import { T } from "../../src/domain/Toy";
 
 import { IEvent } from "../../src/domain/core/IEvent";
 
 export class InMemoryToyRepository implements IToyRepository {
-  private _toys: Map<string, Toy> = new Map<string, Toy>();
+  private _toys: Map<string, T> = new Map<string, T>();
   private _raisedEvents: IEvent[] = [];
 
-  findByName(name: string): Option<Toy> {
+  findByName(name: string): Option<T> {
     for (let toy of this._toys.values()) {
       if (toy.name === name) {
         return some(toy);
@@ -17,12 +17,12 @@ export class InMemoryToyRepository implements IToyRepository {
     return none;
   }
 
-  findById(id: string): Option<Toy> {
+  findById(id: string): Option<T> {
     const toy = this._toys.get(id);
     return toy ? some(toy) : none;
   }
 
-  save(toy: Toy): void {
+  save(toy: T): void {
     this._raisedEvents = [];
     this._toys = this._toys.set(toy.getId(), toy);
 

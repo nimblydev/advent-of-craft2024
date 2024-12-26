@@ -1,7 +1,7 @@
 import { Either, left, right } from "fp-ts/lib/Either";
 import { Unit } from "../domain/core/Unit";
 import { DeliverToy } from "./DeliverToy";
-import { Toy } from "../domain/Toy";
+import { T } from "../domain/Toy";
 import { pipe } from "fp-ts/function";
 import * as O from "fp-ts/Option";
 import * as E from "fp-ts/Either";
@@ -33,7 +33,7 @@ export class ToyDeliveryUseCase {
     return foundToy;
   }
 
-  private reduceStock(toy: Toy): Either<DomainError, Toy> {
+  private reduceStock(toy: T): Either<DomainError, T> {
     const updatedToy = toy.reduceStock();
     this.repository.save(toy);
 

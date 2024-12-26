@@ -1,10 +1,10 @@
-import {Option} from "fp-ts/Option";
-import {Toy} from "./Toy";
+import { Option } from "fp-ts/Option";
+import { T } from "./Toy";
 
 export interface IToyRepository {
-    findByName(toyName: string): Option<Toy>;
+  findByName(toyName: string): Option<T>;
 
-    findById(id: string): Option<Object>;
+  findById(id: string): Option<Object>;
 
-    save(toy: Toy): void;
+  save(toy: T): void;
 }

@@ -7,7 +7,7 @@ import { pipe } from "fp-ts/function";
 import * as E from "fp-ts/Either";
 import { DomainError } from "./core/DomainError";
 
-export class Toy extends EventSourcedAggregate {
+export class T extends EventSourcedAggregate {
   name?: string;
   private stock: StockUnit;
 
@@ -24,20 +24,20 @@ export class Toy extends EventSourcedAggregate {
     timeProvider: () => Date,
     name: string,
     stock: number
-  ): Either<DomainError, Toy> {
+  ): Either<DomainError, T> {
     return pipe(
       StockUnit.from(stock),
-      E.map((s) => new Toy(timeProvider, name, s))
+      E.map((s) => new T(timeProvider, name, s))
     );
   }
 
-  private applyToyCreated(toy: Toy, event: ToyCreatedEvent): void {
+  private applyToyCreated(toy: T, event: ToyCreatedEvent): void {
     toy.id = event.id;
     toy.name = event.name;
     toy.stock = event.stock;
   }
 
-  reduceStock(): Either<DomainError, Toy> {
+  reduceStock(): Either<DomainError, T> {
     if (!this.stock.isSupplied()) {
       return left(new DomainError(`No more ${this.name} in stock`));
     }
@@ -55,7 +55,7 @@ export class Toy extends EventSourcedAggregate {
     return right(this);
   }
 
-  private applyStockReduced(toy: Toy, event: StockReducedEvent): void {
+  private applyStockReduced(toy: T, event: StockReducedEvent): void {
     toy.stock = event.newStock;
   }
 
