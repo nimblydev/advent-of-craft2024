@@ -3,8 +3,8 @@ import { StockUnit } from "./StockUnit";
 
 export class StockReducedEvent extends Event {
   constructor(
-    id: string,
-    date: Date,
+    public id: string,
+    public date: Date,
     public itemName: string,
     public newStock: StockUnit
   ) {
