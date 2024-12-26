@@ -12,7 +12,7 @@ export class ToyDeliveryUseCase {
   constructor(private repository: IToyRepository) {}
 
   handle(deliverToy: DeliverToy): Either<DomainError, Unit> {
-    const foundToy = pipe(
+    let foundToy = pipe(
       this.repository.findByName(deliverToy.desiredToy),
       (option) =>
         pipe(
