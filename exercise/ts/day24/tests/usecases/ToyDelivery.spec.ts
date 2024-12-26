@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 import { InMemoryToyRepository } from "../doubles/InMemoryToyRepository";
-import { ToyDeliveryUseCase } from "../../src/usecases/ToyDeliveryUseCase";
+import { TDUC } from "../../src/usecases/ToyDeliveryUseCase";
 import { T } from "../../src/domain/Toy";
 import { ToyBuilder } from "../ToyBuilder";
 import { DeliverToy } from "../../src/usecases/DeliverToy";
@@ -15,11 +15,11 @@ import { IEvent } from "../../src/domain/core/IEvent";
 
 describe("ToyDeliveryTests", () => {
   let toyRepository: InMemoryToyRepository;
-  let useCase: ToyDeliveryUseCase;
+  let useCase: TDUC;
 
   beforeEach(() => {
     toyRepository = new InMemoryToyRepository();
-    useCase = new ToyDeliveryUseCase(toyRepository);
+    useCase = new TDUC(toyRepository);
   });
 
   const forASuppliedToy = (stock: number = 1): T => {

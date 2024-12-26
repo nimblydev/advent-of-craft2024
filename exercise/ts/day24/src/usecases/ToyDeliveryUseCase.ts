@@ -8,7 +8,7 @@ import * as E from "fp-ts/Either";
 import { DomainError } from "../domain/core/DomainError";
 import { IToyRepository } from "../domain/IToyRepository";
 
-export class ToyDeliveryUseCase {
+export class TDUC {
   constructor(private repository: IToyRepository) {}
 
   handle(deliverToy: DeliverToy): Either<DomainError, Unit> {
