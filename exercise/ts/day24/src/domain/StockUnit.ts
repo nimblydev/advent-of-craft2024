@@ -1,4 +1,4 @@
-import { Either, left, right } from "fp-ts/lib/Either";
+import { Either, left, right as ri } from "fp-ts/lib/Either";
 import { DomainError } from "./core/DomainError";
 
 export class StockUnit {
@@ -6,7 +6,7 @@ export class StockUnit {
 
   static from(stock: number): Either<DomainError, StockUnit> {
     return stock >= 0
-      ? right(new StockUnit(stock))
+      ? ri(new StockUnit(stock))
       : left(new DomainError("A stock unit cannot be negative"));
   }
 
