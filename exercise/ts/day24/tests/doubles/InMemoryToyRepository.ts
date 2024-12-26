@@ -8,7 +8,7 @@ export class InMemoryToyRepository implements IToyRepository {
   private _toys: Map<string, T> = new Map<string, T>();
   private _raisedEvents: IEvent[] = [];
 
-  findByName(name: string): Option<T> {
+  fBn(name: string): Option<T> {
     for (let toy of this._toys.values()) {
       if (toy.name === name) {
         return some(toy);

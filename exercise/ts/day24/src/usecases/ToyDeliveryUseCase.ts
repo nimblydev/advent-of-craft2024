@@ -12,7 +12,7 @@ export class TDUC {
   constructor(private repository: IToyRepository) {}
 
   handle(deliverToy: DeliverToy): Either<DomainError, Unit> {
-    const findAToy = this.repository.findByName(deliverToy.desiredToy);
+    const findAToy = this.repository.fBn(deliverToy.desiredToy);
 
     let foundToy = E.fromOption(() => this.errorFor(deliverToy))(findAToy);
     if (foundToy === undefined) {
