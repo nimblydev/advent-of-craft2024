@@ -41,14 +41,16 @@ export class Toy extends EventSourcedAggregate {
     if (!this.stock.isSupplied()) {
       return left(new DomainError(`No more ${this.name} in stock`));
     }
-    this.raiseEvent(
-      new StockReducedEvent(
-        this.id,
-        this.time(),
-        this.name!,
-        this.stock.decrease()
-      )
-    );
+    if (!this.stock.isLow()) {
+      this.raiseEvent(
+        new StockReducedEvent(
+          this.id,
+          this.time(),
+          this.name!,
+          this.stock.decrease()
+        )
+      );
+    }
 
     return right(this);
   }
