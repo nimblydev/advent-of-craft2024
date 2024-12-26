@@ -19,6 +19,7 @@ export class StockUnit {
   }
 
   decrease(): StockUnit {
-    return new StockUnit(this.value - 1);
+    this.value -= 1;
+    return this;
   }
 }
