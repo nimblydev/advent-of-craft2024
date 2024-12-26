@@ -1,6 +1,6 @@
 config:
   git:
-    auto-push: false
+    auto-push: true
     polling-period: 2s
   mob-timer:
     duration: 5m0s
