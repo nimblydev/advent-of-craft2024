@@ -1,13 +1,13 @@
-import {Event} from "./core/Event"
-import {StockUnit} from "./StockUnit";
-
-export class ToyCreatedEvent extends Event {
-    constructor(
-        id: string,
-        date: Date,
-        public name: string,
-        public stock: StockUnit
-    ) {
-        super(id, 1, date);
-    }
+import { Event } from "./core/Event";
+import { IEvent } from "./core/IEvent";
+import { StockUnit } from "./StockUnit";
+import { v4 as uuidv4 } from "uuid";
+export class ToyCreatedEvent implements IEvent {
+  constructor(
+    public id: string = uuidv4(),
+    public date: Date = new Date(),
+    public name: string,
+    public stock: StockUnit,
+    public version: number = 1
+  ) {}
 }
