@@ -6,7 +6,7 @@ export abstract class EventSourcedAggregate implements IAggregate {
   get version(): number {
     return this._version;
   }
-  private uncommittedEvents: IEvent[] = [];
+  private bufferedEvents: IEvent[] = [];
   private registeredRoutes: Map<string, (event: IEvent) => void> = new Map();
 
   private readonly timeProvider: () => Date;
@@ -41,14 +41,14 @@ export abstract class EventSourcedAggregate implements IAggregate {
     );
   };
 
-  getUncommittedEvents = (): IEvent[] => [...this.uncommittedEvents];
+  getUncommittedEvents = (): IEvent[] => [...this.bufferedEvents];
   clearUncommittedEvents = (): void => {
-    this.uncommittedEvents = [];
+    this.bufferedEvents = [];
   };
 
   protected raiseEvent = (event: IEvent): void => {
     this.applyEvent(event);
-    this.uncommittedEvents.push(event);
+    this.bufferedEvents.push(event);
   };
 
   protected time = (): Date => this.timeProvider();
