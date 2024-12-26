@@ -12,17 +12,14 @@ export class ToyDeliveryUseCase {
   constructor(private repository: IToyRepository) {}
 
   handle(deliverToy: DeliverToy): Either<DomainError, Unit> {
-    let foundToy = pipe(
-      this.repository.findByName(deliverToy.desiredToy),
-      (option) =>
-        pipe(
-          option,
-          O.match(
-            () => left(this.errorFor(deliverToy)),
-            (some) => right(some)
-          )
-        )
-    );
+    const findAToy = this.repository.findByName(deliverToy.desiredToy);
+
+    let foundToy = E.fromOption(() => this.errorFor(deliverToy))(findAToy);
+    if (foundToy === undefined) {
+      foundToy = left(this.errorFor(deliverToy));
+    } else {
+      foundToy = foundToy;
+    }
 
     if (E.isRight(foundToy)) {
       return pipe(
