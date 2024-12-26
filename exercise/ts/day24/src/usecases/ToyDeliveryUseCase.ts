@@ -35,7 +35,7 @@ export class TDUC {
 
   private reduceStock(toy: T): Either<DomainError, T> {
     const updatedToy = toy.reduceStock();
-    this.repository.save(toy);
+    this.repository.store(toy);
 
     return updatedToy;
   }

@@ -22,7 +22,7 @@ export class InMemoryToyRepository implements IToyRepository {
     return toy ? some(toy) : none;
   }
 
-  save(toy: T): void {
+  store(toy: T): void {
     this._raisedEvents = [];
     this._toys = this._toys.set(toy.getId(), toy);
 

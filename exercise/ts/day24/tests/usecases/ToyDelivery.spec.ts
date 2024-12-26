@@ -24,7 +24,7 @@ describe("ToyDeliveryTests", () => {
 
   const forASuppliedToy = (stock: number = 1): T => {
     const toy = ToyBuilder.toysInStock(stock).build();
-    toyRepository.save(toy);
+    toyRepository.store(toy);
     return toy;
   };
 

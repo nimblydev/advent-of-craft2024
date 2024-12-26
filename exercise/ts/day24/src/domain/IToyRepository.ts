@@ -6,5 +6,5 @@ export interface IToyRepository {
 
   fBi(id: string): Option<Object>;
 
-  save(toy: T): void;
+  store(toy: T): void;
 }
