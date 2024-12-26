@@ -7,7 +7,7 @@ export abstract class EventSourcedAggregate implements IAggregate {
     return this._version;
   }
   private bufferedEvents: IEvent[] = [];
-  private registeredRoutes: Map<string, (event: IEvent) => void> = new Map();
+  private r: Map<string, (event: IEvent) => void> = new Map();
 
   private readonly timeProvider: () => Date;
 
@@ -25,7 +25,7 @@ export abstract class EventSourcedAggregate implements IAggregate {
   protected abstract registerRoutes(): void;
 
   applyEvent = (event: IEvent): void => {
-    const handler = this.registeredRoutes.get(event.constructor.name);
+    const handler = this.r.get(event.constructor.name);
     if (handler) {
       handler(event);
       this._version++;
@@ -36,9 +36,7 @@ export abstract class EventSourcedAggregate implements IAggregate {
     eventType: new (...args: any[]) => TEvent,
     apply: (event: TEvent) => void
   ): void => {
-    this.registeredRoutes.set(eventType.name, (event: IEvent) =>
-      apply(event as TEvent)
-    );
+    this.r.set(eventType.name, (event: IEvent) => apply(event as TEvent));
   };
 
   getUncommittedEvents = (): IEvent[] => [...this.bufferedEvents];
