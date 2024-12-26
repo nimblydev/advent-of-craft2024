@@ -23,7 +23,7 @@ export class TDUC {
 
     if (E.isRight(foundToy)) {
       return pipe(
-        this.reduceStock(foundToy.right),
+        this.less(foundToy.right),
         E.match(
           (error) => left(error),
           () => right(Unit.default)
@@ -33,7 +33,7 @@ export class TDUC {
     return foundToy;
   }
 
-  private reduceStock(toy: T): Either<DomainError, T> {
+  private less(toy: T): Either<DomainError, T> {
     const updatedToy = toy.reduceStock();
     this.repository.store(toy);
 
