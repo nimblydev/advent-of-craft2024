@@ -1,4 +1,3 @@
-import { Event } from "./core/Event";
 import { IEvent } from "./core/IEvent";
 import { StockUnit } from "./StockUnit";
 import { v4 as uuidv4 } from "uuid";
