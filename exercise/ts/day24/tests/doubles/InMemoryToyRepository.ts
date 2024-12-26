@@ -17,7 +17,7 @@ export class InMemoryToyRepository implements IToyRepository {
     return none;
   }
 
-  findById(id: string): Option<T> {
+  fBi(id: string): Option<T> {
     const toy = this._toys.get(id);
     return toy ? some(toy) : none;
   }
