@@ -32,7 +32,7 @@ describe("ToyDeliveryTests", () => {
     test("toy and update stock", () => {
       const toy = forASuppliedToy(1);
       const command = new DeliverToy(faker.commerce.product(), toy.name);
-      const result = useCase.handle(command);
+      const result = useCase.do(command);
 
       expect(E.isRight(result)).toBeTruthy();
       expect(rightValue(result)).toBe(Unit.default);
@@ -62,7 +62,7 @@ describe("ToyDeliveryTests", () => {
   describe("Fail When", () => {
     test("toy has not been built", () => {
       const notBuiltToy = "Not a Bike";
-      const result = useCase.handle(
+      const result = useCase.do(
         new DeliverToy(faker.commerce.product(), notBuiltToy)
       );
 
@@ -77,7 +77,7 @@ describe("ToyDeliveryTests", () => {
 
     test("toy is not supplied anymore", () => {
       const toy = forASuppliedToy(0);
-      const result = useCase.handle(
+      const result = useCase.do(
         new DeliverToy(faker.commerce.product(), toy.name)
       );
 
